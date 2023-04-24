@@ -69,6 +69,17 @@ public class LottoCouponTest {
     }
 
     @Test
+    void testGetUnwantedNumbers() {
+        lottoCoupon.addUnwantedNumber(10);
+        lottoCoupon.addUnwantedNumber(20);
+        List<Integer> unwantedNumbers = lottoCoupon.getUnwantedNumbers();
+        assertEquals(2, unwantedNumbers.size());
+        assertTrue(unwantedNumbers.contains(10));
+        assertTrue(unwantedNumbers.contains(20));
+        assertFalse(unwantedNumbers.contains(30));
+    }
+
+    @Test
     void testGenerateTickets() {
         Map<Integer, List<Integer>> tickets = lottoCoupon.generateTickets();
         assertEquals(10, tickets.size());
