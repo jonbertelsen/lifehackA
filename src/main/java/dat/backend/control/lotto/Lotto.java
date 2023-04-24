@@ -24,22 +24,22 @@ public class Lotto extends HttpServlet {
 
         String numberCount = request.getParameter("numberCount");
         if (numberCount != null && !numberCount.isEmpty()) {
-            lottoCoupon.setNumberCount(Integer.parseInt(request.getParameter("numberCount")));
+            lottoCoupon.setNumberCount(Integer.parseInt(numberCount));
         }
 
         String numberIntervalMin = request.getParameter("numberIntervalMin");
         if (numberIntervalMin != null && !numberIntervalMin.isEmpty()) {
-            lottoCoupon.setNumberIntervalMin(Integer.parseInt(request.getParameter("numberIntervalMin")));
+            lottoCoupon.setNumberIntervalMin(Integer.parseInt(numberIntervalMin));
         }
 
         String numberIntervalMax = request.getParameter("numberIntervalMax");
         if (numberIntervalMax != null && !numberIntervalMax.isEmpty()) {
-            lottoCoupon.setNumberIntervalMax(Integer.parseInt(request.getParameter("numberIntervalMax")));
+            lottoCoupon.setNumberIntervalMax(Integer.parseInt(numberIntervalMax));
         }
 
         String ticketCount = request.getParameter("ticketCount");
         if (ticketCount != null && !ticketCount.isEmpty()) {
-            lottoCoupon.setTicketCount(Integer.parseInt(request.getParameter("ticketCount")));
+            lottoCoupon.setTicketCount(Integer.parseInt(ticketCount));
         }
 
         if (lottoCoupon.getNumberIntervalMin() > lottoCoupon.getNumberIntervalMax()) {
