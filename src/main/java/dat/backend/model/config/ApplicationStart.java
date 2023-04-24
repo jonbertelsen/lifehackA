@@ -28,20 +28,20 @@ public class ApplicationStart implements ServletContextListener
 
     }
 
-    @Override
-    public void contextInitialized(ServletContextEvent sce)
-    {
-        Logger.getLogger("web").log(Level.INFO, "Starting up application and connection pool");
-        try
-        {
-            Class.forName("org.slf4j.impl.StaticLoggerBinder");
-            connectionPool = new ConnectionPool();
-        }
-        catch (ClassNotFoundException e)
-        {
-            Logger.getLogger("web").log(Level.SEVERE, e.getMessage(), e);
-        }
-    }
+//    @Override
+//    public void contextInitialized(ServletContextEvent sce)
+//    {
+//        Logger.getLogger("web").log(Level.INFO, "Starting up application and connection pool");
+//        try
+//        {
+//            Class.forName("org.slf4j.impl.StaticLoggerBinder");
+//            connectionPool = new ConnectionPool();
+//        }
+//        catch (ClassNotFoundException e)
+//        {
+//            Logger.getLogger("web").log(Level.SEVERE, e.getMessage(), e);
+//        }
+//    }
 
     public static ConnectionPool getConnectionPool()
     {
