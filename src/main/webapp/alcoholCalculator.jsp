@@ -22,13 +22,13 @@
             </label><br>
                 <%--Bodyweight--%>
             <label for="weight">Din kropsvægt i kg:
-                <input type="number" step="0.1" min="1" id="weight" name="weight">
+                <input type="number" step="0.1" min="1" id="weight" name="weight" value="1">
             </label>
             <br>
                 <%--Gender--%>
             <p>Gender:</p>
             <label for="female">Female
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" name="gender" value="female" checked>
             </label><br>
             <label for="male">Male
                 <input type="radio" id="male" name="gender" value="male">
