@@ -24,7 +24,6 @@ public class AlcoholServlet extends HttpServlet {
         float bal = balCalc(weight, gender, time, units);
 
 
-
         request.setAttribute("bal", bal);
         request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
 
