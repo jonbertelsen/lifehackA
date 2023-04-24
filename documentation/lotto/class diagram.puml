@@ -1,0 +1,20 @@
+@startuml
+
+class LottoCoupon {
+    - final List<Integer> unwantedNumbers
+    - int numberCount = 7
+    - int numberIntervalMin = 1
+    - int numberIntervalMax = 36
+    - int ticketCount = 10
+
+    + LottoCoupon()
+    + getters()
+    + setters()
+
+    + boolean addUnwantedNumber(int number)
+    + boolean removeUnwantedNumber(Integer number)
+    + Map<Integer, List<Integer>> generateTickets()
+    - List<Integer> generateTicket()
+}
+
+@enduml
