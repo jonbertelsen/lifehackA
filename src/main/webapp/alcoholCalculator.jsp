@@ -18,7 +18,7 @@
 
                 <%--Units--%>
             <label for="units">Antal genstande drukket:
-                <input type="number" id="units" name="units">
+                <input type="number" id="units" name="units" min="0" value="0">
             </label><br>
                 <%--Bodyweight--%>
             <label for="weight">Din kropsvægt i kg:
