@@ -95,7 +95,7 @@ public class Lotto extends HttpServlet {
 
         public Map<Integer, List<Integer>> generateTickets() {
             Map<Integer, List<Integer>> tickets = new HashMap<>();
-            for (int i = 0; i < this.ticketCount; i++) {
+            for (int i = 1; i <= this.ticketCount; i++) {
                 tickets.put(i, this.generateNumbers());
             }
             return tickets;
