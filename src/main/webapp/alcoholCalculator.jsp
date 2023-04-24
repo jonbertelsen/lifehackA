@@ -38,7 +38,7 @@
                 <input type="number" name="hours" id="hours" min="0" placeholder="timer">
             </label>
             <label for="minutes">
-                <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutter">
+                <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutter" value="0">
             </label>
             <button type="submit">Beregn</button>
         </form>
