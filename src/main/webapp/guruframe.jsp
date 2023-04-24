@@ -12,7 +12,7 @@
     <br>
     <textarea id="text-input" name="text" rows="10" cols="50"></textarea>
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" maxlength="50">
 </form>
 <br>
 <br>

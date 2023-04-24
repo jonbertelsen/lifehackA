@@ -38,29 +38,37 @@ public class GuruLoad extends HttpServlet {
         // URL of the OpenAI API
         String url = "https://api.openai.com/v1/completions";
 
-        // Sends an HTTP POST request to the OpenAI API
-        HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
-        con.setRequestMethod("POST");
-        con.setRequestProperty("Content-Type", "application/json");
-        con.setRequestProperty("Authorization", "Bearer " + apiKey);
+        if (text != null && text.length() <= 50) {
+            // Constructs a JSON object with the text prompt and other parameters
+            JSONObject data = new JSONObject();
+            data.put("model", "text-davinci-003");
+            data.put("prompt", text);
+            data.put("max_tokens", 4000);
+            data.put("temperature", 1.0);
 
-        // Constructs a JSON object with the text prompt and other parameters
-        JSONObject data = new JSONObject();
-        data.put("model", "text-davinci-003");
-        data.put("prompt", text);
-        data.put("max_tokens", 4000);
-        data.put("temperature", 1.0);
+            // Sends an HTTP POST request to the OpenAI API
+            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+            con.setRequestMethod("POST");
+            con.setRequestProperty("Content-Type", "application/json");
+            con.setRequestProperty("Authorization", "Bearer " + apiKey);
 
-        // Sends the JSON object as the request body of the HTTP POST request
-        con.setDoOutput(true);
-        con.getOutputStream().write(data.toString().getBytes());
+            // Sends the JSON object as the request body of the HTTP POST request
+            con.setDoOutput(true);
+            con.getOutputStream().write(data.toString().getBytes());
 
-        // Reads the response from the OpenAI API and retrieves the generated text
-        String output = new BufferedReader(new InputStreamReader(con.getInputStream())).lines()
-                .reduce((a, b) -> a + b).get();
-        String answer = new JSONObject(output).getJSONArray("choices").getJSONObject(0).getString("text");
+            // Reads the response from the OpenAI API and retrieves the generated text
+            String output = new BufferedReader(new InputStreamReader(con.getInputStream())).lines()
+                    .reduce((a, b) -> a + b).get();
+            String answer = new JSONObject(output).getJSONArray("choices").getJSONObject(0).getString("text");
 
-        request.getSession().setAttribute("answer", answer);
+            request.getSession().setAttribute("answer", answer);
+        } else {
+            // Generates a default answer if the text prompt is too long or null
+            String answer = "Skriv en tekst på max 50 tegn";
+
+            request.getSession().setAttribute("answer", answer);
+        }
+
         request.getRequestDispatcher("guruframe.jsp").forward(request, response);
     }
 
