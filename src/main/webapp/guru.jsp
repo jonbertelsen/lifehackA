@@ -14,6 +14,19 @@
     </jsp:attribute>
 
     <jsp:body>
-        <iframe id="guru-iframe" src="${pageContext.request.contextPath}/guruframe.jsp" width="100%" height="200"></iframe>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe id="guru-iframe" src="${pageContext.request.contextPath}/guruframe.jsp" style="height: 500px;" width="100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </jsp:body>
 </t:pagetemplate>
