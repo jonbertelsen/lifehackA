@@ -4,11 +4,6 @@ import java.util.Scanner;
 
 public class BMICalculator {
 
-    public static void main(String[] args) {
-        BMICalculator bmiCalculator = new BMICalculator();
-        bmiCalculator.calculateBMI();
-    }
-
     public double calculateBMI (){
 
         Scanner userInput = new Scanner(System.in);
@@ -23,6 +18,4 @@ public class BMICalculator {
         System.out.println("your bmi is:" + bmi);
         return bmi;
     }
-
-
 }
