@@ -1,0 +1,9 @@
+@startuml
+autonumber
+
+User -> Web: Set Lotto Coupon information
+Web --> User: Show Lotto Coupon information
+
+User -> Web: Press Generate button
+Web --> User: Show generated Lotto Coupon numbers
+@enduml
