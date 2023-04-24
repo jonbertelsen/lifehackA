@@ -17,18 +17,34 @@ public class AlcoholServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String gender = request.getParameter("gender");
-        float weight = Float.parseFloat(request.getParameter("weight"));
-        float units = Float.parseFloat(request.getParameter("units"));
-        int hours = Integer.parseInt(request.getParameter("hours"));
-        int minutes = Integer.parseInt(request.getParameter("minutes"));
-        float time = hours + (minutes/60);
-        AlcoholCalculator calculator = new AlcoholCalculator();
-        float bal = calculator.balCalc(weight, gender, time, units);
+
+        String gender;
+        float weight;
+        float units;
+        int hours;
+        int minutes;
+        float time;
+
+        try {
+            gender = request.getParameter("gender");
+            weight = Float.parseFloat(request.getParameter("weight"));
+            units = Float.parseFloat(request.getParameter("units"));
+            hours = Integer.parseInt(request.getParameter("hours"));
+            minutes = Integer.parseInt(request.getParameter("minutes"));
+            time = hours + (minutes / 60);
+
+            AlcoholCalculator calculator = new AlcoholCalculator();
+            float bal = calculator.balCalc(weight, gender, time, units);
 
 
-        request.setAttribute("bal", bal);
-        request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
+            request.setAttribute("bal", bal);
+            request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
+
+        } catch (NumberFormatException e) {
+            request.setAttribute("msg", "Please input all values");
+            request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
+        }
+
 
     }
 

@@ -14,6 +14,10 @@
 
     <jsp:body>
 
+
+        <c:if test="${requestScope.msg != null}">
+            <p>${requestScope.msg}</p>
+        </c:if>
         <form action="alcoholservlet" method="post">
 
                 <%--Units--%>
@@ -35,7 +39,7 @@
             </label><br>
                 <%--Time since start--%>
             <label for="hours">Antal timer du har drukket:
-                <input type="number" name="hours" id="hours" min="0" placeholder="timer">
+                <input type="number" name="hours" id="hours" min="0" placeholder="timer" value="0">
             </label>
             <label for="minutes">
                 <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutter" value="0">
