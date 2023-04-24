@@ -12,12 +12,15 @@
 </head>
 <body>
 
-<form action="/ServletBmiCalculate" method="get">
+<form action="ServletBmiCalculate" method="get">
     <input type="text" id="height" name="height" placeholder="Height"><br>
     <input type="text" id="weight" name="weight" placeholder="Weight"><br><br>
-    <label> </label>
     <input type="submit" value="Submit">
 </form>
+
+<c:if test="${not empty bmiLabel}">
+    <label id="bmiLabel" name="bmiLabel">${bmiLabel.text}</label>
+</c:if>
 
 </body>
 </html>
