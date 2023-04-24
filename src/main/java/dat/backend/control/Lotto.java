@@ -6,6 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "lotto", urlPatterns = {"/lotto"})
 public class Lotto extends HttpServlet {
@@ -85,14 +89,20 @@ public class Lotto extends HttpServlet {
             this.ticketCount = ticketCount;
         }
 
-        public int[][] generateTickets() {
-            int[][] tickets = new int[this.ticketCount][this.numberCount];
+        public Map<Integer, List<Integer>> generateTickets() {
+            Map<Integer, List<Integer>> tickets = new HashMap<>();
             for (int i = 0; i < this.ticketCount; i++) {
-                for (int j = 0; j < this.numberCount; j++) {
-                    tickets[i][j] = (int) (Math.random() * (this.numberIntervalMax - this.numberIntervalMin + 1)) + this.numberIntervalMin;
-                }
+                tickets.put(i, generateNumbers());
             }
             return tickets;
+        }
+
+        private List<Integer> generateNumbers() {
+            List<Integer> numbers = new ArrayList<>();
+            for (int i = 0; i < this.numberCount; i++) {
+                numbers.add((int) (Math.random() * (this.numberIntervalMax - this.numberIntervalMin + 1)) + this.numberIntervalMin);
+            }
+            return numbers;
         }
     }
 }
