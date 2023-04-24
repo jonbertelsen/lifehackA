@@ -48,6 +48,10 @@ public class LottoCoupon {
         this.ticketCount = ticketCount;
     }
 
+    public List<Integer> getUnwantedNumbers() {
+        return this.unwantedNumbers;
+    }
+
     public boolean addUnwantedNumber(int number) {
         if (this.unwantedNumbers.contains(number)) {
             return false;
