@@ -16,15 +16,17 @@ public class AlcoholServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String gender = request.getParameter("gender");
-        float weight = (float) request.getAttribute("weight");
-        float units = (float) request.getAttribute("units");
-        int hours = (int) request.getAttribute("hours");
-        int minutes = (int) request.getAttribute("minutes");
+        float weight = Float.parseFloat(request.getParameter("weight"));
+        float units = Float.parseFloat(request.getParameter("units"));
+        int hours = Integer.parseInt(request.getParameter("hours"));
+        int minutes = Integer.parseInt(request.getParameter("minutes"));
         float time = hours + (minutes/60);
         float bal = balCalc(weight, gender, time, units);
 
+
+
         request.setAttribute("bal", bal);
-        request.getRequestDispatcher("alcoholCalculator.jsp");
+        request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
 
     }
     private float balCalc(float weight, String gender, float time, float units){
