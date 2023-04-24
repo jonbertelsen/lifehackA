@@ -1,5 +1,7 @@
 package dat.backend.control;
 
+import dat.backend.model.entities.AlcoholCalculator;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -21,31 +23,13 @@ public class AlcoholServlet extends HttpServlet {
         int hours = Integer.parseInt(request.getParameter("hours"));
         int minutes = Integer.parseInt(request.getParameter("minutes"));
         float time = hours + (minutes/60);
-        float bal = balCalc(weight, gender, time, units);
+        AlcoholCalculator calculator = new AlcoholCalculator();
+        float bal = calculator.balCalc(weight, gender, time, units);
 
 
         request.setAttribute("bal", bal);
         request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
 
-    }
-    private float balCalc(float weight, String gender, float time, float units){
-
-        if (gender.equalsIgnoreCase("male")) {
-            return balCalcMale(weight, time, units);
-        }
-        else if(gender.equalsIgnoreCase("female")){
-            return balCalcFemale(weight, time, units);
-        }
-        return 100000;
-    }
-
-    private float balCalcMale(float weight, float time, float units){
-        float bal = (float) (units * 12 / (weight *0.7) - (0.15 * time));
-        return bal;
-    }
-    private float balCalcFemale(float weight, float time, float units){
-        float bal = (float) (units * 12 / (weight *0.6) - (0.15 * time));
-        return bal;
     }
 
 }
