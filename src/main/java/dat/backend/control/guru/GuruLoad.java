@@ -38,10 +38,10 @@ public class GuruLoad extends HttpServlet {
         // URL of the OpenAI API
         String url = "https://api.openai.com/v1/completions";
 
-        if (text != null && text.length() <= 50) {
+        if (text != "" && text.length() <= 50) {
             // Constructs a JSON object with the text prompt and other parameters
             JSONObject data = new JSONObject();
-            data.put("model", "text-curie-001"); // Curie is cheaper than davinci and I dont think we can see the difference. Else we will have to go back to davinci
+            data.put("model", "text-davinci-003");
             data.put("prompt", text);
             data.put("max_tokens", 1000);
             data.put("temperature", 1.0);
