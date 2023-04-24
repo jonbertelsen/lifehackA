@@ -15,30 +15,58 @@
 
     <jsp:body>
 
-        <div class="row">
-            <div class="col-12">
-                <div>
-                    <table id="ipi-table" class="table table tablesorter">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th>Ticket</th>
-                            <c:forEach begin="1" end="${requestScope.lottoCoupon.getNumberIntervalMax()}" var="i">
-                                <th>Number ${i}</th>
+        <form action="lotto" method="post">
+
+            <label for="numberCount">Number of tickets</label> <br>
+            <input id="numberCount" name="numberCount" type="number" placeholder="write the amount of tickets you want">
+            <br>
+
+            <label for="numberIntervalMin">Minimum number pullable</label> <br>
+            <input id="numberIntervalMin" min="1" name="numberIntervalMin" type="number"
+                   placeholder="write the minimum number pullables"> <br> <br>
+
+            <label for="numberIntervalMax">Maximum number pullable</label> <br>
+            <input id="numberIntervalMax" name="numberIntervalMax" type="number"
+                   placeholder="write the maximum number pullables"> <br> <br>
+
+            <label for="ticketCount">number of tickets in play</label> <br>
+            <input id="ticketCount" name="ticketCount" type="number" placeholder="Number of entries">
+            <br> <br>
+            <button class="btn btn-primary" type="submit"> submit</button>
+        </form>
+
+        <c:if test="${requestScope.lottoCoupon != null}">
+
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <table id="ipi-table" class="table table tablesorter">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th>Ticket</th>
+                                <c:forEach begin="1" end="${requestScope.lottoCoupon.getNumberIntervalMax()}" var="i">
+                                    <th>Number ${i}</th>
+                                </c:forEach>
+
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${requestScope.lottoCoupon.generateTickets()}" var="ticket">
+                                <tr>
+                                    <c:forEach items="${ticket.values()}" var="number">
+                                        <td>${number}</td>
+                                    </c:forEach>
+                                </tr>
                             </c:forEach>
-
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Cell 1</td>
-                        </tr>
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
+        </c:if>
+
+
 
     </jsp:body>
 </t:pagetemplate>
