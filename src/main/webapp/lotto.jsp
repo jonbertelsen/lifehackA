@@ -57,7 +57,7 @@
                 <p>Unwanted numbers: ${sessionScope.lottoCoupon.unwantedNumbers}</p>
 
 
-                <iframe name="iframe" id="iframe" sandbox="allow-forms" src="unwantedServlet"></iframe>
+                <iframe name="iframe" id="iframe" sandbox="allow-forms" src="unwanted-numbers"></iframe>
             </div>
 
 

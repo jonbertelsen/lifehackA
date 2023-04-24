@@ -1,18 +1,14 @@
 package dat.backend.control.lotto;
 
-import dat.backend.model.entities.LottoCoupon;
+import dat.backend.model.entities.lotto.LottoCoupon;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "unwantedServlet", value = "/unwantedServlet")
-public class unwantedServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
+@WebServlet(name = "unwanted-numbers", value = "/unwanted-numbers")
+public class UnwantedNumbers extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,13 +19,7 @@ public class unwantedServlet extends HttpServlet {
 
         int unwantedNumber = Integer.parseInt(request.getParameter("unwantedNumbers"));
         lottoCoupon.addUnwantedNumber(unwantedNumber);
-
-
-
-
         request.getSession().setAttribute("lottoCoupon", lottoCoupon);
         request.getRequestDispatcher("unwantedNumbers.jsp").forward(request, response);
-
-
     }
 }
