@@ -31,7 +31,7 @@ public class ApplicationStart implements ServletContextListener
     @Override
     public void contextInitialized(ServletContextEvent sce)
     {
-        Logger.getLogger("web").log(Level.INFO, "Starting up application and connection pool");
+  /*      Logger.getLogger("web").log(Level.INFO, "Starting up application and connection pool");
         try
         {
             Class.forName("org.slf4j.impl.StaticLoggerBinder");
@@ -41,6 +41,7 @@ public class ApplicationStart implements ServletContextListener
         {
             Logger.getLogger("web").log(Level.SEVERE, e.getMessage(), e);
         }
+        */
     }
 
     public static ConnectionPool getConnectionPool()
@@ -51,9 +52,10 @@ public class ApplicationStart implements ServletContextListener
     @Override
     public void contextDestroyed(ServletContextEvent sce)
     {
-        Logger.getLogger("web").log(Level.INFO, "Shutting down application and connection pool");
+  /*      Logger.getLogger("web").log(Level.INFO, "Shutting down application and connection pool");
         unregisterJDBCdrivers();
         connectionPool.close();
+        */
     }
 
     private void unregisterJDBCdrivers()
