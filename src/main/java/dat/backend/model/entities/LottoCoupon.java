@@ -7,6 +7,8 @@ import java.util.Map;
 
 public class LottoCoupon {
 
+    private final List<Integer> unwantedNumbers = new ArrayList<>();
+
     private int numberCount = 7;
     private int numberIntervalMin = 1;
     private int numberIntervalMax = 36;
@@ -46,6 +48,24 @@ public class LottoCoupon {
         this.ticketCount = ticketCount;
     }
 
+    public boolean addUnwantedNumber(int number) {
+        if (this.unwantedNumbers.contains(number)) {
+            return false;
+        }
+
+        this.unwantedNumbers.add(number);
+        return true;
+    }
+
+    public boolean removeUnwantedNumber(int number) {
+        if (!this.unwantedNumbers.contains(number)) {
+            return false;
+        }
+
+        this.unwantedNumbers.remove(number);
+        return true;
+    }
+
     public Map<Integer, List<Integer>> generateTickets() {
         Map<Integer, List<Integer>> tickets = new HashMap<>();
         for (int i = 1; i <= this.ticketCount; i++) {
@@ -57,7 +77,11 @@ public class LottoCoupon {
     private List<Integer> generateNumbers() {
         List<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < this.numberCount; i++) {
-            numbers.add((int) (Math.random() * (this.numberIntervalMax - this.numberIntervalMin + 1)) + this.numberIntervalMin);
+            Integer currentNum = null;
+            while (currentNum == null || this.unwantedNumbers.contains(currentNum)) {
+                currentNum = (int) (Math.random() * (this.numberIntervalMax - this.numberIntervalMin + 1)) + this.numberIntervalMin;
+            }
+            numbers.add(currentNum);
         }
         return numbers;
     }
