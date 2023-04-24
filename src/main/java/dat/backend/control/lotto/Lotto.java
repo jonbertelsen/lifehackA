@@ -17,7 +17,7 @@ public class Lotto extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        LottoCoupon lottoCoupon = (LottoCoupon) request.getAttribute("lottoCoupon");
+        LottoCoupon lottoCoupon = (LottoCoupon) request.getSession().getAttribute("lottoCoupon");
         if (lottoCoupon == null) {
             lottoCoupon = new LottoCoupon();
         }
@@ -46,7 +46,7 @@ public class Lotto extends HttpServlet {
             request.setAttribute("error", "Minimum number must be smaller than maximum number");
         }
 
-        request.setAttribute("lottoCoupon", lottoCoupon);
+        request.getSession().setAttribute("lottoCoupon", lottoCoupon);
         request.getRequestDispatcher("lotto.jsp").forward(request, response);
     }
 }
