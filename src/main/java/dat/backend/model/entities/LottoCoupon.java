@@ -57,7 +57,8 @@ public class LottoCoupon {
         return true;
     }
 
-    public boolean removeUnwantedNumber(int number) {
+    // TODO: Hvis parameteren er `int` og ikke `Integer`, så virker det ikke fordi ArrayList#remove(int) er index.
+    public boolean removeUnwantedNumber(Integer number) {
         if (!this.unwantedNumbers.contains(number)) {
             return false;
         }
