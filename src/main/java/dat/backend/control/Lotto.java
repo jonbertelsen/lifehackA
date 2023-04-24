@@ -15,43 +15,43 @@ public class Lotto extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        LottoCouponInformation information = (LottoCouponInformation) request.getAttribute("lottoCoupon");
-        if (information == null) {
-            information = new LottoCouponInformation();
+        LottoCoupon lottoCoupon = (LottoCoupon) request.getAttribute("lottoCoupon");
+        if (lottoCoupon == null) {
+            lottoCoupon = new LottoCoupon();
         }
 
         if (request.getParameter("numberCount") != null) {
-            information.setNumberCount(Integer.parseInt(request.getParameter("numberCount")));
+            lottoCoupon.setNumberCount(Integer.parseInt(request.getParameter("numberCount")));
         }
 
         if (request.getParameter("numberIntervalMin") != null) {
-            information.setNumberIntervalMin(Integer.parseInt(request.getParameter("numberIntervalMin")));
+            lottoCoupon.setNumberIntervalMin(Integer.parseInt(request.getParameter("numberIntervalMin")));
         }
 
         if (request.getParameter("numberIntervalMax") != null) {
-            information.setNumberIntervalMax(Integer.parseInt(request.getParameter("numberIntervalMax")));
+            lottoCoupon.setNumberIntervalMax(Integer.parseInt(request.getParameter("numberIntervalMax")));
         }
 
         if (request.getParameter("ticketCount") != null) {
-            information.setTicketCount(Integer.parseInt(request.getParameter("ticketCount")));
+            lottoCoupon.setTicketCount(Integer.parseInt(request.getParameter("ticketCount")));
         }
 
-        if (information.getNumberIntervalMin() > information.getNumberIntervalMax()) {
+        if (lottoCoupon.getNumberIntervalMin() > lottoCoupon.getNumberIntervalMax()) {
             request.setAttribute("error", "Minimum number must be smaller than maximum number");
         }
 
-        request.setAttribute("lottoCoupon", information);
+        request.setAttribute("lottoCoupon", lottoCoupon);
         request.getRequestDispatcher("lotto.jsp").forward(request, response);
     }
 
-    public static class LottoCouponInformation {
+    public static class LottoCoupon {
 
         private int numberCount = 7;
         private int numberIntervalMin = 1;
         private int numberIntervalMax = 36;
         private int ticketCount = 10;
 
-        public LottoCouponInformation() { }
+        public LottoCoupon() { }
 
         public int getNumberCount() {
             return this.numberCount;
