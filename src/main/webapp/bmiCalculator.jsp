@@ -12,5 +12,12 @@
 </head>
 <body>
 
+<form action="/ServletBmiCalculate" method="get">
+    <input type="text" id="height" name="height" placeholder="Height"><br>
+    <input type="text" id="weight" name="weight" placeholder="Weight"><br><br>
+    <label> </label>
+    <input type="submit" value="Submit">
+</form>
+
 </body>
 </html>
