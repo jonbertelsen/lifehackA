@@ -1,4 +1,4 @@
-package dat.backend.model.entities;
+package dat.backend.model.entities.lotto;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,12 +74,12 @@ public class LottoCoupon {
     public Map<Integer, List<Integer>> generateTickets() {
         Map<Integer, List<Integer>> tickets = new HashMap<>();
         for (int i = 1; i <= this.ticketCount; i++) {
-            tickets.put(i, this.generateNumbers());
+            tickets.put(i, this.generateTicket());
         }
         return tickets;
     }
 
-    private List<Integer> generateNumbers() {
+    private List<Integer> generateTicket() {
         List<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < this.numberCount; i++) {
             Integer currentNum = null;

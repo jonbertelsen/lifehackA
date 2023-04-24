@@ -1,6 +1,6 @@
 package dat.backend.entities;
 
-import dat.backend.model.entities.LottoCoupon;
+import dat.backend.model.entities.lotto.LottoCoupon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -66,6 +66,17 @@ public class LottoCouponTest {
         assertTrue(lottoCoupon.removeUnwantedNumber(20));
         assertFalse(lottoCoupon.removeUnwantedNumber(10));
         assertFalse(lottoCoupon.removeUnwantedNumber(20));
+    }
+
+    @Test
+    void testGetUnwantedNumbers() {
+        lottoCoupon.addUnwantedNumber(10);
+        lottoCoupon.addUnwantedNumber(20);
+        List<Integer> unwantedNumbers = lottoCoupon.getUnwantedNumbers();
+        assertEquals(2, unwantedNumbers.size());
+        assertTrue(unwantedNumbers.contains(10));
+        assertTrue(unwantedNumbers.contains(20));
+        assertFalse(unwantedNumbers.contains(30));
     }
 
     @Test

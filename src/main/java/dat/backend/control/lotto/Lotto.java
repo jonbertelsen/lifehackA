@@ -1,6 +1,6 @@
 package dat.backend.control.lotto;
 
-import dat.backend.model.entities.LottoCoupon;
+import dat.backend.model.entities.lotto.LottoCoupon;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
