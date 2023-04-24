@@ -1,6 +1,6 @@
 package dat.backend.entities;
 
-import dat.backend.model.entities.LottoCoupon;
+import dat.backend.model.entities.lotto.LottoCoupon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

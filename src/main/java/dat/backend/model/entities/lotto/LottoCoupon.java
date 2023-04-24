@@ -1,4 +1,4 @@
-package dat.backend.model.entities;
+package dat.backend.model.entities.lotto;
 
 import java.util.ArrayList;
 import java.util.HashMap;
