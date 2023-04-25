@@ -1,15 +1,33 @@
 /* CSS stylesheet  for application */
 
-table {
-    border-collapse: collapse;
-    border: 1px solid silver;
-    padding:15px;
+#height,#weight{
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
 }
+#submit{
+    background-color: #000185;
+    font-family: Arial sans-serif;
+    color: #D1Af15 !important;
+    width:11%;
+    height:5%;
+    box-sizing:border-box;
+    border: 2px solid black;
+    border-radius: 25px;
 
-th, td {
-    border: 1px solid silver;
-    padding:15px;
+    box-shadow: 0px 1px 16px -4px rgba(0, 0, 0, 0.55);
+    -webkit-box-shadow: 0px 1px 16px -4px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 0px 1px 16px -4px rgba(0, 0, 0, 0.55);
 }
-
+.designtext{
+    color: #000185;
+}
+#heightweightSubmit, .bmi-label{
+    text-align:center;
+    margin-top: 200px;
+}
 
 
