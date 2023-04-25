@@ -6,39 +6,11 @@
 
 <t:pagetemplate>
     <jsp:attribute name="header">
-        <style>
-            body {
-                background-image: linear-gradient(pink, #a56f61);
-            }
-            p {
-                font-size: 20px;
-                color: #000038;
-            }
-            .exclusion {
-                color: beige;
-            }
-            .section-heading {
-                color: #000185 !important;
-            }
-            input {
-                font-size: 20px;
-                color: #000038;
-            }
-            label {
-                font-size: 20px;
-                color: #000038;
-            }
-
-        </style>
-
-        <p style="color: #000185 !important; font-size: 50px">Lotto!</p>
-
-
-
+        Lotto Generator!
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-        Lotto!
+        Lotto Generator!
     </jsp:attribute>
 
     <jsp:body>
@@ -68,7 +40,7 @@
                             style="height: 250px; width: 250px; border-radius: 125px"> </span>
                         <h4 class="section-heading">Unwanted numbers</h4>
                         <p >Any numbers you would commit hate-crime against? Have them removed! Just
-                            tell us which numbers shouldnt be up for generation, and we'll have it your way!</p>
+                            tell us which numbers shouldn't be up for generation, and we'll have it your way!</p>
                     </div>
                     <div class="col-md-4"><span class="fa-stack fa-4x"><i
                             class="fa fa-circle fa-stack-2x text-primary"></i><i
@@ -77,7 +49,7 @@
                             style="height: 250px; width: 250px; border-radius: 125px"> </span>
                         <h4 class="section-heading">Feeling clairvoyant?</h4>
                         <p >Do you have any favorite numbers? If so, you should see a doctor. Alas, we
-                            do not descriminate (at least not in public). The numbers you like, shall be added as you
+                            do not discriminate (at least not in public). The numbers you like, shall be added as you
                             please! </p>
                     </div>
                 </div>
@@ -100,13 +72,13 @@
                            placeholder="write the amount of numbers you want generated">
                     <br> <br>
 
-                    <label for="numberIntervalMin">Minimum number pullable</label> <br>
+                    <label for="numberIntervalMin">Minimum number generatable</label> <br>
                     <input id="numberIntervalMin" min="1" name="numberIntervalMin" type="number"
-                           placeholder="write the minimum number pullables"> <br> <br>
+                           placeholder="write the minimum number generatable"> <br> <br>
 
-                    <label for="numberIntervalMax">Maximum number pullable</label> <br>
+                    <label for="numberIntervalMax">Maximum number generatable</label> <br>
                     <input id="numberIntervalMax" name="numberIntervalMax" type="number"
-                           placeholder="write the maximum number pullables"> <br> <br>
+                           placeholder="write the maximum number generatable"> <br> <br>
 
                     <label for="ticketCount">number of tickets in play</label> <br>
                     <input id="ticketCount" name="ticketCount" type="number" placeholder="Number of entries">
@@ -124,7 +96,7 @@
             </div>
 
             <div class="col-1"></div>
-            <div class="col-5" style="border: 5px solid #382E00; border-width: thick; background-color: ; padding: 20px; border-radius: 25px">
+            <div class="col-5" style="border: 5px solid #382E00; border-width: thick; padding: 20px; border-radius: 25px">
                 <br>
                 <p>Your chosen number of numbers: ${sessionScope.lottoCoupon.numberCount}</p>
                 <p>The minimal interval you chose is: ${sessionScope.lottoCoupon.numberIntervalMin}</p>
@@ -148,7 +120,7 @@
                         <table id="ipi-table" class="table table-striped table-bordered table-hover" style="background-color: #a58a97">
                             <thead style="background-color: #615159" >
                             <tr>
-                                <th>Ticket</th>
+                                <th>Row</th>
                                 <c:forEach begin="1" end="${sessionScope.lottoCoupon.numberCount}" var="i">
                                     <th>Number ${i}</th>
                                 </c:forEach>
@@ -160,8 +132,8 @@
                             <c:forEach items="${sessionScope.lottoCoupon.generateCoupon().rows}" var="row">
                                 <tr>
                                     <td>${row.key}.</td>
-                                    <c:forEach items="${row.value}" var="number">
-                                        <td>${number.getNumber()}</td>
+                                    <c:forEach items="${row.value.numbers}" var="number">
+                                        <td>${number.number}</td>
                                     </c:forEach>
                                 </tr>
                             </c:forEach>
@@ -171,6 +143,30 @@
                 </div>
             </div>
         </c:if>
+        <style>
+            body {
+                background-image: linear-gradient(pink, #a56f61);
+            }
+            p {
+                font-size: 20px;
+                color: #000038;
+            }
+            .exclusion {
+                color: beige;
+            }
+            .section-heading {
+                color: #000185 !important;
+            }
+            input {
+                font-size: 20px;
+                color: #000038;
+            }
+            label {
+                font-size: 20px;
+                color: #000038;
+            }
+
+        </style>
 
     </jsp:body>
 </t:pagetemplate>
