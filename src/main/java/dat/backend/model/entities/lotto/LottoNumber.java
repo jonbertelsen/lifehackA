@@ -21,7 +21,7 @@ public class LottoNumber {
     }
 
     public LottoNumber generateNumber(int numberIntervalMin, int numberIntervalMax, List<Integer> unwantedNumbers) {
-        if (this.number < numberIntervalMin || this.number > numberIntervalMax || !unwantedNumbers.contains(this.number)) {
+        if (this.number >= numberIntervalMin && this.number <= numberIntervalMax && !unwantedNumbers.contains(this.number)) {
             return this;
         }
 
