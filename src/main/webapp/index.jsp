@@ -5,26 +5,29 @@
 
 <t:pagetemplate>
     <jsp:attribute name="header">
-         Lifehacks
     </jsp:attribute>
 
-    <jsp:attribute name="footer">
-        Welcome to the frontpage
-    </jsp:attribute>
 
     <jsp:body>
+        <h1>Lifehacks!</h1>
+
+        <form action="dummy.jsp">
+            <input type="submit" value="dummy">
+        </form>
+        <form action="dummy.jsp">
+            <input type="submit" value="dummy">
+        </form>
+        <form action="dummy.jsp">
+            <input type="submit" value="dummy">
+        </form>
+        <form action="dummy.jsp">
+            <input type="submit" value="dummy">
+        </form>
+        <form action="dummy.jsp">
+            <input type="submit" value="dummy">
+        </form>
 
 
-        <h1>hej</h1>
-
-        <c:if test="${sessionScope.user != null}">
-            <p>You are logged in with the role of "${sessionScope.user.role}".</p>
-        </c:if>
-
-        <c:if test="${sessionScope.user == null}">
-            <p>You are not logged in yet. You can do it here: <a
-                    href="login.jsp">Login</a></p>
-        </c:if>
 
     </jsp:body>
 
