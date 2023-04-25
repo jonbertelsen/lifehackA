@@ -101,24 +101,4 @@ public class LottoCoupon {
         this.rows.putAll(rows);
         return this;
     }
-
-    public Map<Integer, List<Integer>> generateTickets() {
-        Map<Integer, List<Integer>> tickets = new HashMap<>();
-        for (int i = 1; i <= this.ticketCount; i++) {
-            tickets.put(i, this.generateTicket());
-        }
-        return tickets;
-    }
-
-    private List<Integer> generateTicket() {
-        List<Integer> numbers = new ArrayList<>();
-        for (int i = 0; i < this.numberCount; i++) {
-            Integer currentNum = null;
-            while (currentNum == null || this.unwantedNumbers.contains(currentNum)) {
-                currentNum = (int) (Math.random() * (this.numberIntervalMax - this.numberIntervalMin + 1)) + this.numberIntervalMin;
-            }
-            numbers.add(currentNum);
-        }
-        return numbers;
-    }
 }
