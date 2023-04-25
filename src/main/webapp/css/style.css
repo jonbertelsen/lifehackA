@@ -7,20 +7,34 @@ body{
 h1{
    color: #000185;
 }
+
 p{
     color: #000038;
 }
+
 .navbar{
     background-color: #000038;
 }
+
 .nav-link{
+    color: #d1af15;
+}
+
+.btn{
+    background-color: #000185;
+    border-radius: 25px;
+    color: #d1af15;
+}
+.btn:hover{
+    background-color: #000185;
+    border-radius: 25px;
     color: #d1af15;
 }
 
 
 table {
     border-collapse: collapse;
-    border: 1px solid brown;
+    border: 1px solid white;
     padding:15px;
 }
 
