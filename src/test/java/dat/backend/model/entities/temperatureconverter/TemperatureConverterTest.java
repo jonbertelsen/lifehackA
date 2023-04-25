@@ -10,12 +10,6 @@ class TemperatureConverterTest {
     static TemperatureConverter temperatureConverter = new TemperatureConverter();
     static double CELCIUSTEST = 10;
     static double FAHRENHEITTEST = 10;
-    @BeforeEach
-
-    void setUp() {
-
-
-    }
 
     @Test
     void temperatureConverterForCelciusToFahrenheit() {

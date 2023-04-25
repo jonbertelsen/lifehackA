@@ -23,7 +23,7 @@ public class TemperatureConverterServlet extends HttpServlet {
             try {
                 double temperature = Double.parseDouble((request.getParameter("temperature")));
                 temperature = tempConverter.temperatureConverterForCelciusToFahrenheit(temperature);
-                request.setAttribute("temperature", temperature);
+                request.setAttribute("temperaturecelcius", temperature);
             }
             catch (IllegalArgumentException e) {
                 request.setAttribute("error","Wrong input type");
@@ -33,7 +33,7 @@ public class TemperatureConverterServlet extends HttpServlet {
             try {
                 double temperature = Double.parseDouble((request.getParameter("temperature")));
                 temperature = tempConverter.temperatureConverterForFahrenheitToCelcius(temperature);
-                request.setAttribute("temperature", temperature);
+                request.setAttribute("temperaturefahrenheit", temperature);
             }
             catch (IllegalArgumentException e) {
                 request.setAttribute("error","Wrong input type");

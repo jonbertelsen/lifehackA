@@ -13,11 +13,6 @@
     </jsp:attribute>
 
     <jsp:body>
-
-        <form action="temperatureconverterservlet" method="get">
-            <button type="submit">Test</button>
-        </form>
-
         <p>Startcode for 2nd semester </p>
 
         <c:if test="${sessionScope.user != null}">
