@@ -7,7 +7,6 @@ body{
 h1{
    color: #000185;
 }
-
 p{
     color: #000038;
 }
@@ -18,6 +17,9 @@ p{
 
 .nav-link{
     color: #d1af15;
+}
+.nav-link:hover{
+    color: #846C00;
 }
 
 .btn{
@@ -42,6 +44,26 @@ th, td {
     border: 1px solid silver;
     padding:15px;
 }
+input{
+    border: 2px solid #382E00;
+}
+form{
+    color: #000038;
+}
+h5{
+    color: #000038;
+}
+.frontpageTitle {
+    background-color: #d1af15;
+    padding: 20px 30px;
+    border: 2px dashed #382E00;
+    border-radius: 25%;
+}
+.frontpageUnderTitle, h5{
+    text-align: center;
+    max-width: 800px;
+}
+
 
 
 

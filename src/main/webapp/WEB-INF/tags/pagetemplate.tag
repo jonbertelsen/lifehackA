@@ -32,9 +32,14 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 1</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 2</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 3</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/alcoholCalculator.jsp">Promille måler</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/lotto">Lotto</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/guru.jsp">Guru</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/unitConverter">Enheds omformer</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/runningCalc.jsp">Løbe måler</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">Rygestop hjælper</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">BMI beregner</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Sodavands indtag</a>
                 </div>
             </div>
         </div>
