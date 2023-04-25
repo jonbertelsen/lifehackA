@@ -11,6 +11,13 @@ import java.io.IOException;
 public class UnwantedNumbers extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /*
+            This method needs to be here, otherwise the IFrame will show 405 cuz there is no HTTP method GET.
+         */
+    }
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LottoCoupon lottoCoupon = (LottoCoupon) request.getSession().getAttribute("lottoCoupon");
         if (lottoCoupon == null) {
