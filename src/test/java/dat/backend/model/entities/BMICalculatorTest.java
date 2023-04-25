@@ -1,4 +1,4 @@
-package dat.backend.control;
+package dat.backend.model.entities;
 
 import dat.backend.model.entities.BMICalculator;
 import org.junit.jupiter.api.BeforeAll;
