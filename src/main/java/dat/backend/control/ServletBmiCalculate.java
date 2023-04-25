@@ -12,11 +12,11 @@ import java.io.IOException;
 public class ServletBmiCalculate extends HttpServlet {
         @Override
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            int height = Integer.parseInt((request.getParameter("height")));
-            int weight = Integer.parseInt((request.getParameter("weight")));
+            double height = Double.parseDouble((request.getParameter("height")));
+            double weight = Double.parseDouble((request.getParameter("weight")));
 
             BMICalculator bmiCalculator = new BMICalculator();
-            int BMI = bmiCalculator.calculateBMI(weight, height);
+            double BMI = bmiCalculator.calculateBMI(weight, height);
 
             // Create a new Label object and set its text to the calculated BMI value
             Label bmiLabel = new Label();
