@@ -20,6 +20,6 @@ public class UnwantedNumbers extends HttpServlet {
         int unwantedNumber = Integer.parseInt(request.getParameter("unwantedNumbers"));
         lottoCoupon.addUnwantedNumber(unwantedNumber);
         request.getSession().setAttribute("lottoCoupon", lottoCoupon);
-        request.getRequestDispatcher("unwantedNumbers.jsp").forward(request, response);
+        request.getRequestDispatcher("lottoUnwantedNumbers.jsp").forward(request, response);
     }
 }
