@@ -1,4 +1,4 @@
-package dat.backend.control;
+package dat.backend.control.BmiCalculater;
 
 import dat.backend.model.entities.BMICalculator;
 
@@ -20,6 +20,7 @@ public class ServletBmiCalculate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         double height = Double.parseDouble((request.getParameter("height")));
         double weight = Double.parseDouble((request.getParameter("weight")));
+
 
         BMICalculator bmiCalculator = new BMICalculator();
         double BMI = bmiCalculator.calculateBMI(weight, height);
