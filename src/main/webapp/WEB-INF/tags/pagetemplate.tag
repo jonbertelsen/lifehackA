@@ -38,8 +38,8 @@
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/unitConverter">Enheds omformer</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/runningCalc.jsp">Løbe måler</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">Rygestop hjælper</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">BMI beregner</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Sodavands indtag</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">BMI beregner</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sodaIntake.jsp">Sodavands indtag</a>
                 </div>
             </div>
         </div>

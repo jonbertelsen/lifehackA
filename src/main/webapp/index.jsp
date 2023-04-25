@@ -57,7 +57,7 @@
          <form action="#">
              <button type="submit" class="btn">Bmi beregner</button>
          </form>
-         <form action="#">
+         <form action="sodaIntake.jsp">
              <button type="submit" class="btn">Sodavands indtag</button>
          </form>
      </div>
