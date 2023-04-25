@@ -53,6 +53,10 @@
                 Din promille er lige nu:
             </h4>
             <p>${requestScope.bal}</p>
+
+            <div class="text-danger">
+                <p>${requestScope.worningMsg}</p>
+            </div>
         </c:if>
 
     </jsp:body>
