@@ -38,7 +38,7 @@ public class LottoCoupon {
         return regenerateCoupon();
     }
 
-    public LottoCoupon regenerateCoupon() {
+    private LottoCoupon regenerateCoupon() {
         Map<Integer, LottoRow> rows = new HashMap<>();
         for (int i = 1; i <= this.ticketCount; i++) {
             rows.put(i, new LottoRow().generateRow(this.numberCount, this.numberIntervalMin, this.numberIntervalMax, this.unwantedNumbers));
@@ -95,10 +95,6 @@ public class LottoCoupon {
 
     public Map<Integer, LottoRow> getRows() {
         return this.rows;
-    }
-
-    public LottoRow getRow(int rowNumber) {
-        return this.rows.get(rowNumber);
     }
 
     public void addRow(int rowNumber, LottoRow row) {
