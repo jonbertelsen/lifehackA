@@ -35,6 +35,10 @@ public class AlcoholServlet extends HttpServlet {
 
             AlcoholCalculator calculator = new AlcoholCalculator();
             float bal = calculator.balCalc(weight, gender, time, units);
+            if(bal < 0)
+            {
+                bal = 0;
+            }
             if(bal > 0.5)
             {
                 request.setAttribute("worningMsg", "Din promille er over den lovlige alkoholgrænse for bilkørsel (0,5)");
