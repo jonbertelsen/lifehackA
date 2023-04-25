@@ -7,19 +7,47 @@
 <html>
 <head>
     <title>Title</title>
+
+    <style>
+        p {
+            font-size: 20px;
+            color: #000038;
+        }
+        .exclusion {
+            color: beige;
+        }
+        .section-heading {
+            color: #000185 !important;
+        }
+        input {
+            font-size: 20px;
+            color: #000038;
+        }
+        label {
+            font-size: 20px;
+            color: #000038;
+        }
+
+    </style>
 </head>
 <body>
 
-You have chosen to exclude:
-<c:forEach items="${sessionScope.lottoCoupon.getUnwantedNumbers()}" var="unwantedNumber">
+<p>You have chosen to exclude:
+
+<c:forEach items="${sessionScope.lottoCoupon.unwantedNumbers}" var="unwantedNumber">
 
     <c:if test="${sessionScope.lottoCoupon.unwantedNumbers.size() < 1}">
         ${unwantedNumber}
+    <td> <form action="unwanted-numbers" method="get">
+            <input type="hidden" name="removeUnwantedNumber" value="${unwantedNumber}">
+            <input type="submit" value="Remove">
+</form>
+</td>
     </c:if>
 
     ${unwantedNumber},
 </c:forEach>
-
+</p>
 
 </body>
 </html>
