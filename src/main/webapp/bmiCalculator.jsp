@@ -27,9 +27,14 @@
 
 
 <c:if test="${not empty bmiLabel}">
+
     <div class="bmi-label">
         <label id="bmiLabel" name="bmiLabel">${bmiLabel.text}</label>
     </div>
+    <div class="bmi-label">
+        <label id="bmiAssessment" name="bmiAssessment">${bmiAssessment.text}</label>
+    </div>
+
 </c:if>
 
 </body>

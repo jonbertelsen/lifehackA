@@ -8,11 +8,11 @@ public class BMICalculator {
 
     }
 //
-    public double calculateBMI (double weightInKg, double heightInCm){
+    public int calculateBMI (int weightInKg, int heightInCm){
 
-        double heightInM = heightInCm / 100;
+        int heightInM = heightInCm / 100;
 
-        double bmi = weightInKg / (heightInM * heightInM);
+        int bmi = weightInKg / (heightInM * heightInM);
 
         return bmi;
     }
