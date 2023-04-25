@@ -1,8 +1,18 @@
-/* CSS stylesheet  for application */
+/* CSS stylesheet for application */
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    color: red;
+   /* color: #000185; */
+}
+
 
 table {
     border-collapse: collapse;
-    border: 1px solid silver;
+    border: 1px solid brown;
     padding:15px;
 }
 
