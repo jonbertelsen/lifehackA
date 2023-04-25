@@ -2,6 +2,9 @@ package dat.backend.model.entities;
 
 public class AlcoholCalculator {
 
+    // Formel til beregning af promille:
+    // https://www.sundhed.dk/borger/patienthaandbogen/psyke/sygdomme/alkohol/alkoholpromille-beregning/
+
     public float balCalc(float weight, String gender, float time, float units) {
 
         if (gender.equalsIgnoreCase("male")) {
