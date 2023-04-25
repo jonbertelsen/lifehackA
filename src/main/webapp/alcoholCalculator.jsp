@@ -52,6 +52,10 @@
                 Your blood alcohol content is:
             </h4>
             <p>${requestScope.bal}</p>
+
+            <div class="text-danger">
+                <p>${requestScope.worningMsg}</p>
+            </div>
         </c:if>
 
     </jsp:body>
