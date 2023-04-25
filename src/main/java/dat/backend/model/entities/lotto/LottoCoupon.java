@@ -23,6 +23,25 @@ public class LottoCoupon {
 
     public LottoCoupon() { }
 
+    public LottoCoupon generateCoupon() {
+        if (this.rows.size() == this.ticketCount) {
+            return this;
+        }
+
+        return regenerateCoupon();
+    }
+
+    public LottoCoupon regenerateCoupon() {
+        Map<Integer, LottoRow> rows = new HashMap<>();
+        for (int i = 1; i <= this.ticketCount; i++) {
+            rows.put(i, new LottoRow().generateRow(this.numberCount, this.numberIntervalMin, this.numberIntervalMax, this.unwantedNumbers));
+        }
+
+        this.rows.clear();
+        this.rows.putAll(rows);
+        return this;
+    }
+
     public int getNumberCount() {
         return this.numberCount;
     }
@@ -81,24 +100,5 @@ public class LottoCoupon {
 
     public void removeRow(int rowNumber) {
         this.rows.remove(rowNumber);
-    }
-
-    public LottoCoupon generateCoupon() {
-        if (this.rows.size() == this.ticketCount) {
-            return this;
-        }
-
-        return regenerateCoupon();
-    }
-
-    public LottoCoupon regenerateCoupon() {
-        Map<Integer, LottoRow> rows = new HashMap<>();
-        for (int i = 1; i <= this.ticketCount; i++) {
-            rows.put(i, new LottoRow().generateRow(this.numberCount, this.numberIntervalMin, this.numberIntervalMax, this.unwantedNumbers));
-        }
-
-        this.rows.clear();
-        this.rows.putAll(rows);
-        return this;
     }
 }

@@ -8,23 +8,11 @@ public class LottoRow {
 
     private final List<LottoNumber> numbers = new ArrayList<>();
 
-    public LottoRow() { }
-
     public LottoRow(List<LottoNumber> numbers) {
         this.numbers.addAll(numbers);
     }
 
-    public List<LottoNumber> getNumbers() {
-        return this.numbers;
-    }
-
-    public void addNumber(LottoNumber number) {
-        this.numbers.add(number);
-    }
-
-    public void addNumber(int number) {
-        this.numbers.add(new LottoNumber(number));
-    }
+    public LottoRow() { }
 
     public LottoRow generateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers) {
         if (numbers.size() == numberCount) {
@@ -43,5 +31,17 @@ public class LottoRow {
         this.numbers.clear();
         this.numbers.addAll(numbers);
         return this;
+    }
+
+    public List<LottoNumber> getNumbers() {
+        return this.numbers;
+    }
+
+    public void addNumber(LottoNumber number) {
+        this.numbers.add(number);
+    }
+
+    public void addNumber(int number) {
+        this.numbers.add(new LottoNumber(number));
     }
 }

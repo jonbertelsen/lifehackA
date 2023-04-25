@@ -12,14 +12,6 @@ public class LottoNumber {
 
     public LottoNumber() { }
 
-    public int getNumber() {
-        return this.number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
     public LottoNumber generateNumber(int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers) {
         if (this.number >= numberIntervalMin && this.number <= numberIntervalMax && !unwantedNumbers.contains(this.number)) {
             return this;
@@ -36,5 +28,13 @@ public class LottoNumber {
                 return this;
             }
         }
+    }
+
+    public int getNumber() {
+        return this.number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }
