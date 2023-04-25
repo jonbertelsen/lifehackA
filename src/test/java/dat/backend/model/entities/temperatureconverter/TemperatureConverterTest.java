@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TemperatureConverterTest {
-    static TemperatureConverter temperatureConverter = new TemperatureConverter();
-    static double CELCIUSTEST = 10;
-    static double FAHRENHEITTEST = 10;
+    private static TemperatureConverter temperatureConverter = new TemperatureConverter();
+    private final static double CELCIUSTEST = 10;
+    private final static double FAHRENHEITTEST = 10;
 
     @Test
     void temperatureConverterForCelciusToFahrenheit() {
