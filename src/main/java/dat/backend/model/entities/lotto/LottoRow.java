@@ -1,14 +1,15 @@
 package dat.backend.model.entities.lotto;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class LottoRow {
 
-    private final List<LottoNumber> numbers = new ArrayList<>();
+    private final Set<LottoNumber> numbers = new HashSet<>();
 
-    public LottoRow(List<LottoNumber> numbers) {
+    public LottoRow(Set<LottoNumber> numbers) {
         this.numbers.addAll(numbers);
     }
 
@@ -33,7 +34,7 @@ public class LottoRow {
         return this;
     }
 
-    public List<LottoNumber> getNumbers() {
+    public Set<LottoNumber> getNumbers() {
         return this.numbers;
     }
 
