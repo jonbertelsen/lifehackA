@@ -18,8 +18,6 @@
     <input type="submit" class="btn btn-primary" value="Submit" maxlength="50">
 </form>
 <br>
-<br>
-<br>
 <h1>Guru Output</h1>
 <span>
     ${sessionScope.answer}

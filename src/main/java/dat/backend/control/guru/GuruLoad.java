@@ -69,7 +69,7 @@ public class GuruLoad extends HttpServlet {
             request.getSession().setAttribute("answer", answer);
         }
 
-        request.getRequestDispatcher("guruframe.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/guru/guruframe.jsp").forward(request, response);
     }
 
     private void getKeyFromDroplet() throws Exception {

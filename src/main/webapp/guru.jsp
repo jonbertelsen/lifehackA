@@ -20,7 +20,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe id="guru-iframe" src="${pageContext.request.contextPath}/guruframe.jsp" style="height: 500px;" width="100%"></iframe>
+                                <iframe id="guru-iframe" src="guruframeload" style="height: 500px;" width="100%"></iframe>
                             </div>
                         </div>
                     </div>
