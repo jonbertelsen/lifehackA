@@ -7,12 +7,22 @@ import java.util.Map;
 
 public class LottoCoupon {
 
+    private final Map<Integer, LottoRow> rows = new HashMap<>();
     private final List<Integer> unwantedNumbers = new ArrayList<>();
 
     private int numberCount = 7;
     private int numberIntervalMin = 1;
     private int numberIntervalMax = 36;
     private int ticketCount = 10;
+
+    public LottoCoupon(int numberCount, int numberIntervalMin, int numberIntervalMax, int ticketCount, List<Integer> unwantedNumbers, Map<Integer, LottoRow> rows) {
+        this.numberCount = numberCount;
+        this.numberIntervalMin = numberIntervalMin;
+        this.numberIntervalMax = numberIntervalMax;
+        this.ticketCount = ticketCount;
+        this.unwantedNumbers.addAll(unwantedNumbers);
+        this.rows.putAll(rows);
+    }
 
     public LottoCoupon() { }
 
@@ -75,6 +85,41 @@ public class LottoCoupon {
         this.unwantedNumbers.remove(number);
         return true;
          */
+    }
+
+    public Map<Integer, LottoRow> getRows() {
+        return this.rows;
+    }
+
+    public LottoRow getRow(int rowNumber) {
+        return this.rows.get(rowNumber);
+    }
+
+    public void addRow(int rowNumber, LottoRow row) {
+        this.rows.put(rowNumber, row);
+    }
+
+    public void removeRow(int rowNumber) {
+        this.rows.remove(rowNumber);
+    }
+
+    public LottoCoupon generateCoupon() {
+        if (this.rows.size() == this.ticketCount) {
+            return this;
+        }
+
+        return regenerateCoupon();
+    }
+
+    public LottoCoupon regenerateCoupon() {
+        Map<Integer, LottoRow> rows = new HashMap<>();
+        for (int i = 1; i <= this.ticketCount; i++) {
+            rows.put(i, new LottoRow().generateRow(this.numberCount, this.numberIntervalMin, this.numberIntervalMax, this.unwantedNumbers));
+        }
+
+        this.rows.clear();
+        this.rows.putAll(rows);
+        return this;
     }
 
     public Map<Integer, List<Integer>> generateTickets() {
