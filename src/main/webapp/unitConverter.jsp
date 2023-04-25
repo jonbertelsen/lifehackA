@@ -26,7 +26,6 @@
                 <option value="mm" ${param.inputUnit == 'mm' ? 'selected' : ''}>mm</option>
                 <option value="cm" ${param.inputUnit == 'cm' ? 'selected' : ''}>cm</option>
                 <option value="inches" ${param.inputUnit == 'inches' ? 'selected' : ''}>inches</option>
-                <option value="feet" ${param.inputUnit == 'feet' ? 'selected' : ''}>feet</option>
                 <option value="yards" ${param.inputUnit == 'yards' ? 'selected' : ''}>yards</option>
                 <option value="meter" ${param.inputUnit == 'meter' ? 'selected' : ''}>meter</option>
                 <option value="km" ${param.inputUnit == 'km' ? 'selected' : ''}>km</option>
@@ -44,7 +43,6 @@
                 <option value="mm" ${param.outputUnit == 'mm' ? 'selected' : ''}>mm</option>
                 <option value="cm" ${param.outputUnit == 'cm' ? 'selected' : ''}>cm</option>
                 <option value="inches" ${param.outputUnit == 'inches' ? 'selected' : ''}>inches</option>
-                <option value="feet" ${param.outputUnit == 'feet' ? 'selected' : ''}>feet</option>
                 <option value="yards" ${param.outputUnit == 'yards' ? 'selected' : ''}>yards</option>
                 <option value="meter" ${param.outputUnit == 'meter' ? 'selected' : ''}>meter</option>
                 <option value="km" ${param.outputUnit == 'km' ? 'selected' : ''}>km</option>
