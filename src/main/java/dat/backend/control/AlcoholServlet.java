@@ -44,8 +44,5 @@ public class AlcoholServlet extends HttpServlet {
             request.setAttribute("msg", "Please input all values");
             request.getRequestDispatcher("alcoholCalculator.jsp").forward(request, response);
         }
-
-
     }
-
 }

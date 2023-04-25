@@ -9,7 +9,6 @@
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-        Welcome to the frontpage
     </jsp:attribute>
 
     <jsp:body>
@@ -21,14 +20,14 @@
         <form action="alcoholservlet" method="post">
 
                 <%--Units--%>
-            <label for="units">Antal genstande drukket:
-                <input type="number" id="units" name="units" min="0" value="0">
-            </label><br>
+            <label for="units">Amount of alcoholic units:
+                <input type="number" id="units" name="units" min="0">
+            </label><br><br>
                 <%--Bodyweight--%>
-            <label for="weight">Din kropsvægt i kg:
-                <input type="number" step="0.1" min="1" id="weight" name="weight" value="1">
+            <label for="weight">Bodyweight in kg:
+                <input type="number" step="0.1" min="1" id="weight" name="weight">
             </label>
-            <br>
+            <br><br>
                 <%--Gender--%>
             <p>Gender:</p>
             <label for="female">Female
@@ -36,21 +35,21 @@
             </label><br>
             <label for="male">Male
                 <input type="radio" id="male" name="gender" value="male">
-            </label><br>
+            </label><br><br>
                 <%--Time since start--%>
-            <label for="hours">Antal timer du har drukket:
-                <input type="number" name="hours" id="hours" min="0" placeholder="timer" value="0">
+            <label for="hours">Amount of time you've been drinking:
+                <input type="number" name="hours" id="hours" min="0" placeholder="hours">
             </label>
             <label for="minutes">
-                <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutter" value="0">
+                <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutes">
             </label>
-            <button type="submit">Beregn</button>
+            <button type="submit">Calculate</button>
         </form>
         <br><br>
 
         <c:if test="${requestScope.bal != null}">
             <h4>
-                Din promille er lige nu:
+                Your blood alcohol content is:
             </h4>
             <p>${requestScope.bal}</p>
         </c:if>
