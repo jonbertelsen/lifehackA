@@ -9,7 +9,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LottoCouponTest {
+class LottoCouponTest {
 
     private LottoCoupon lottoCoupon;
 
