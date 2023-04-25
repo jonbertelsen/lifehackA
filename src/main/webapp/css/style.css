@@ -5,8 +5,16 @@ body{
 }
 
 h1{
-    color: red;
-   /* color: #000185; */
+   color: #000185;
+}
+p{
+    color: #000038;
+}
+.navbar{
+    background-color: #000038;
+}
+.nav-link{
+    color: #d1af15;
 }
 
 
