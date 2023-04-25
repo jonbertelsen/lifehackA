@@ -40,12 +40,16 @@
         ${unwantedNumber}
     <td> <form action="unwanted-numbers" method="get">
             <input type="hidden" name="removeUnwantedNumber" value="${unwantedNumber}">
-            <input type="submit" value="Remove">
+            <input class="btn btn-primary" type="submit" value="Remove">
 </form>
 </td>
     </c:if>
 
-    ${unwantedNumber},
+    ${unwantedNumber} <form action="unwanted-numbers" method="get">
+    <input type="hidden" name="removeUnwantedNumber" value="${unwantedNumber}">
+    <input class="btn btn-primary" type="submit" value="Remove">
+</form>,
+
 </c:forEach>
 </p>
 
