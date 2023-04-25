@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "sodaintakeservlet", value = "/sodaintakeservlet")
-public class sodaIntakeServlet extends HttpServlet {
+public class SodaIntakeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -24,7 +24,7 @@ public class sodaIntakeServlet extends HttpServlet {
                 return;
             }
             double dailyIntake = weeklyIntake / 7;
-            double monthlyIntake = weeklyIntake * 4;
+            double monthlyIntake = dailyIntake * 30;
             double yearlyIntake = monthlyIntake * 12;
 
             double dailySaving10 = dailyIntake * 0.10 * pricePerLiter;
@@ -35,7 +35,7 @@ public class sodaIntakeServlet extends HttpServlet {
             double intakeReduction10 = weeklyIntake * 0.1 / 7;
             double intakeReduction20 = weeklyIntake * 0.2 / 7;
             double intakeReduction50 = weeklyIntake * 0.5 / 7;
-            double intakeReduction100 = weeklyIntake * 1.0 / 7;
+            double intakeReduction100 = weeklyIntake / 7;
             /*
             double weeklySaving10 = dailySaving10 * 7;
             double weeklySaving20 = dailySaving20 * 7;

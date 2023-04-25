@@ -111,19 +111,19 @@
                                     </td>
                                     <td>
                                         <c:set var="monthlySaving10" value="${requestScope.dailySaving10 * 30}"/>
-                                        <c:set var="monthlyIntakeReduction10" value="${requestScope.dailyIntakeReduction10 * 30}"/>
+                                        <c:set var="monthlyIntakeReduction10" value="${requestScope.intakeReduction10 * 30}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${monthlySaving10}"/><br>
                                         Du kan stadig drikke: <fmt:formatNumber maxFractionDigits="1" value="${requestScope.monthlyIntake - monthlyIntakeReduction10}"/> L
                                     </td>
                                     <td>
                                         <c:set var="monthlySaving20" value="${requestScope.dailySaving20 * 30}"/>
-                                        <c:set var="monthlyIntakeReduction20" value="${requestScope.dailyIntakeReduction20 * 30}"/>
+                                        <c:set var="monthlyIntakeReduction20" value="${requestScope.intakeReduction20 * 30}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${monthlySaving20}"/><br>
                                         Du kan stadig drikke: <fmt:formatNumber maxFractionDigits="1" value="${requestScope.monthlyIntake - monthlyIntakeReduction20}"/> L
                                     </td>
                                     <td>
                                         <c:set var="monthlySaving50" value="${requestScope.dailySaving50 * 30}"/>
-                                        <c:set var="monthlyIntakeReduction50" value="${requestScope.dailyIntakeReduction50 * 30}"/>
+                                        <c:set var="monthlyIntakeReduction50" value="${requestScope.intakeReduction50 * 30}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${monthlySaving50}"/><br>
                                         Du kan stadig drikke: <fmt:formatNumber maxFractionDigits="1" value="${requestScope.monthlyIntake - monthlyIntakeReduction50}"/> L
                                     </td>
