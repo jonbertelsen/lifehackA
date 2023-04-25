@@ -21,6 +21,13 @@ public class LottoCoupon {
         this.rows.putAll(rows);
     }
 
+    public LottoCoupon(int numberCount, int numberIntervalMin, int numberIntervalMax, int ticketCount) {
+        this.numberCount = numberCount;
+        this.numberIntervalMin = numberIntervalMin;
+        this.numberIntervalMax = numberIntervalMax;
+        this.ticketCount = ticketCount;
+    }
+
     public LottoCoupon() { }
 
     public LottoCoupon generateCoupon() {

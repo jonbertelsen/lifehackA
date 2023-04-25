@@ -6,6 +6,8 @@ import dat.backend.model.entities.lotto.LottoRow;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,11 +19,7 @@ class LottoCouponTest {
 
     @BeforeEach
     void setUp() {
-        lottoCoupon = new LottoCoupon();
-        lottoCoupon.setNumberCount(7);
-        lottoCoupon.setNumberIntervalMin(1);
-        lottoCoupon.setNumberIntervalMax(36);
-        lottoCoupon.setTicketCount(10);
+        lottoCoupon = new LottoCoupon(7, 1, 36, 10);
     }
 
     @Test
