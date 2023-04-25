@@ -13,10 +13,12 @@
 
     <jsp:body>
 
+        <div class="text-danger">
+            <c:if test="${requestScope.msg != null}">
+                <p>${requestScope.msg}</p>
+            </c:if>
+        </div>
 
-        <c:if test="${requestScope.msg != null}">
-            <p>${requestScope.msg}</p>
-        </c:if>
         <form action="alcoholservlet" method="post">
 
                 <%--Units--%>
