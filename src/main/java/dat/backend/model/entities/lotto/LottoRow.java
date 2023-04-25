@@ -2,6 +2,7 @@ package dat.backend.model.entities.lotto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class LottoRow {
 
@@ -25,7 +26,7 @@ public class LottoRow {
         this.numbers.add(new LottoNumber(number));
     }
 
-    public LottoRow generateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, List<Integer> unwantedNumbers) {
+    public LottoRow generateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers) {
         if (numbers.size() == numberCount) {
             return this;
         }
@@ -33,7 +34,7 @@ public class LottoRow {
         return regenerateRow(numberCount, numberIntervalMin, numberIntervalMax, unwantedNumbers);
     }
 
-    private LottoRow regenerateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, List<Integer> unwantedNumbers) {
+    private LottoRow regenerateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers) {
         List<LottoNumber> numbers = new ArrayList<>();
         for (int i = 0; i < numberCount; i++) {
             numbers.add(new LottoNumber().generateNumber(numberIntervalMin, numberIntervalMax, unwantedNumbers));

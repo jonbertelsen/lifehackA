@@ -1,21 +1,18 @@
 package dat.backend.model.entities.lotto;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class LottoCoupon {
 
     private final Map<Integer, LottoRow> rows = new HashMap<>();
-    private final List<Integer> unwantedNumbers = new ArrayList<>();
+    private final Set<Integer> unwantedNumbers = new HashSet<>();
 
     private int numberCount = 7;
     private int numberIntervalMin = 1;
     private int numberIntervalMax = 36;
     private int ticketCount = 10;
 
-    public LottoCoupon(int numberCount, int numberIntervalMin, int numberIntervalMax, int ticketCount, List<Integer> unwantedNumbers, Map<Integer, LottoRow> rows) {
+    public LottoCoupon(int numberCount, int numberIntervalMin, int numberIntervalMax, int ticketCount, Set<Integer> unwantedNumbers, Map<Integer, LottoRow> rows) {
         this.numberCount = numberCount;
         this.numberIntervalMin = numberIntervalMin;
         this.numberIntervalMax = numberIntervalMax;
@@ -58,33 +55,16 @@ public class LottoCoupon {
         this.ticketCount = ticketCount;
     }
 
-    public List<Integer> getUnwantedNumbers() {
+    public Set<Integer> getUnwantedNumbers() {
         return this.unwantedNumbers;
     }
 
     public boolean addUnwantedNumber(int number) {
         return this.unwantedNumbers.add(number);
-        /*
-        if (this.unwantedNumbers.contains(number)) {
-            return false;
-        }
-
-        this.unwantedNumbers.add(number);
-        return true;
-         */
     }
 
-    // TODO: Hvis parameteren er `int` og ikke `Integer`, så virker det ikke fordi ArrayList#remove(int) er index.
-    public boolean removeUnwantedNumber(Integer number) {
+    public boolean removeUnwantedNumber(int number) {
         return this.unwantedNumbers.remove(number);
-        /*
-        if (!this.unwantedNumbers.contains(number)) {
-            return false;
-        }
-
-        this.unwantedNumbers.remove(number);
-        return true;
-         */
     }
 
     public Map<Integer, LottoRow> getRows() {

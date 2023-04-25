@@ -1,6 +1,6 @@
 package dat.backend.model.entities.lotto;
 
-import java.util.List;
+import java.util.Set;
 
 public class LottoNumber {
 
@@ -20,7 +20,7 @@ public class LottoNumber {
         this.number = number;
     }
 
-    public LottoNumber generateNumber(int numberIntervalMin, int numberIntervalMax, List<Integer> unwantedNumbers) {
+    public LottoNumber generateNumber(int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers) {
         if (this.number >= numberIntervalMin && this.number <= numberIntervalMax && !unwantedNumbers.contains(this.number)) {
             return this;
         }
@@ -28,7 +28,7 @@ public class LottoNumber {
         return regenerateNumber(numberIntervalMin, numberIntervalMax, unwantedNumbers);
     }
 
-    private LottoNumber regenerateNumber(int numberIntervalMin, int numberIntervalMax, List<Integer> unwantedNumbers) {
+    private LottoNumber regenerateNumber(int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers) {
         while (true) {
             int currentNum = (int) (Math.random() * (numberIntervalMax - numberIntervalMin + 1)) + numberIntervalMin;
             if (!unwantedNumbers.contains(currentNum)) {

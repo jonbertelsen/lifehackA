@@ -4,7 +4,7 @@ import dat.backend.model.entities.lotto.LottoNumber;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -29,8 +29,8 @@ class LottoNumberTest {
     @Test
     void testGenerateNumber() {
         lottoNumber.setNumber(10);
-        assertEquals(10, lottoNumber.generateNumber(1, 36, new ArrayList<>()).getNumber());
-        int generateNumber = lottoNumber.generateNumber(12, 36, new ArrayList<>()).getNumber();
+        assertEquals(10, lottoNumber.generateNumber(1, 36, new HashSet<>()).getNumber());
+        int generateNumber = lottoNumber.generateNumber(12, 36, new HashSet<>()).getNumber();
         assertTrue(generateNumber >= 12 && generateNumber <= 36);
     }
 }

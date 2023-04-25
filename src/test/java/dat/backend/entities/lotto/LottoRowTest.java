@@ -5,7 +5,7 @@ import dat.backend.model.entities.lotto.LottoRow;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -37,7 +37,7 @@ class LottoRowTest {
 
     @Test
     void testGenerateRow() {
-        lottoRow.generateRow(3, 1, 36, new ArrayList<>());
+        lottoRow.generateRow(3, 1, 36, new HashSet<>());
         assertEquals(3, lottoRow.getNumbers().size());
         for (LottoNumber lottoNumber : lottoRow.getNumbers()) {
             int number = lottoNumber.getNumber();
