@@ -29,5 +29,6 @@ class AlcoholCalculatorTest {
         float expected = 100000;
         float result = calculator.balCalc(80, "car", 1F, 5);
         assertEquals(expected, result);
+        assertFalse(result == 0.92);
     }
 }
