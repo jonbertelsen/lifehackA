@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 <html>
 <head>
@@ -10,9 +13,9 @@
 <form id="guru-form" method="POST" action="guru">
     <label for="text-input">Enter text:</label>
     <br>
-    <textarea id="text-input" name="text" rows="10" cols="50"></textarea>
+    <textarea class="form-control" id="text-input" name="text" rows="5" cols="50"></textarea>
     <br><br>
-    <input type="submit" value="Submit" maxlength="50">
+    <input type="submit" class="btn btn-primary" value="Submit" maxlength="50">
 </form>
 <br>
 <br>
