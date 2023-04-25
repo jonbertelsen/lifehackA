@@ -21,8 +21,8 @@ public class AlcoholServlet extends HttpServlet {
         String gender;
         float weight;
         float units;
-        int hours;
-        int minutes;
+        float hours;
+        float minutes;
         float time;
 
         try {

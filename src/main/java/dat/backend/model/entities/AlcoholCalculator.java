@@ -17,12 +17,12 @@ public class AlcoholCalculator {
     }
 
     private float balCalcMale(float weight, float time, float units) {
-        float bal = (float) (units * 12 / (weight *0.7) - (0.15 * time));
+        float bal = (float) ((units * 12) / (weight *0.7) - (0.15 * time));
         return bal;
     }
 
     private float balCalcFemale(float weight, float time, float units) {
-        float bal = (float) (units * 12 / (weight *0.6) - (0.15 * time));
+        float bal = (float) ((units * 12) / (weight *0.6) - (0.15 * time));
         return bal;
     }
 }

@@ -13,52 +13,65 @@
 
     <jsp:body>
 
-        <div class="text-danger">
-            <c:if test="${requestScope.msg != null}">
-                <p>${requestScope.msg}</p>
-            </c:if>
-        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-danger">
+                        <c:if test="${requestScope.msg != null}">
+                            <p>${requestScope.msg}</p>
+                        </c:if>
+                    </div>
 
-        <form action="alcoholservlet" method="post">
+                    <form action="alcoholservlet" method="post">
 
-                <%--Units--%>
-            <label for="units">Amount of alcoholic units:
-                <input type="number" id="units" name="units" min="0">
-            </label><br><br>
-                <%--Bodyweight--%>
-            <label for="weight">Bodyweight in kg:
-                <input type="number" step="0.1" min="1" id="weight" name="weight">
-            </label>
-            <br><br>
-                <%--Gender--%>
-            <p>Gender:</p>
-            <label for="female">Female
-                <input type="radio" id="female" name="gender" value="female" checked>
-            </label><br>
-            <label for="male">Male
-                <input type="radio" id="male" name="gender" value="male">
-            </label><br><br>
-                <%--Time since start--%>
-            <label for="hours">Amount of time you've been drinking:
-                <input type="number" name="hours" id="hours" min="0" placeholder="hours">
-            </label>
-            <label for="minutes">
-                <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutes">
-            </label>
-            <button type="submit">Calculate</button>
-        </form>
-        <br><br>
+                            <%--Units--%>
+                        <label for="units">Amount of alcoholic units:
+                            <input type="number" id="units" name="units" min="0">
+                        </label><br><br>
+                            <%--Bodyweight--%>
+                        <label for="weight">Bodyweight in kg:
+                            <input type="number" step="0.1" min="1" id="weight" name="weight">
+                        </label>
+                        <br><br>
+                            <%--Gender--%>
+                        <p>Gender:</p>
+                        <label for="female">Female
+                            <input type="radio" id="female" name="gender" value="female" checked>
+                        </label><br>
+                        <label for="male">Male
+                            <input type="radio" id="male" name="gender" value="male">
+                        </label><br><br>
+                            <%--Time since start--%>
+                        <label for="hours">Amount of time you've been drinking:
+                            <br>
+                            <input type="number" name="hours" id="hours" min="0" placeholder="hours">
+                        </label>
+                        <label for="minutes">
+                            <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="minutes">
+                        </label>
+                        <br><br>
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    </form>
+                    <br><br>
 
-        <c:if test="${requestScope.bal != null}">
-            <h4>
-                Your blood alcohol content is:
-            </h4>
-            <p>${requestScope.bal}</p>
+                    <c:if test="${requestScope.bal != null}">
+                        <h4>
+                            Your blood alcohol content is:
+                        </h4>
+                        <p>${requestScope.bal}</p>
 
-            <div class="text-danger">
-                <p>${requestScope.worningMsg}</p>
+                        <div class="text-danger">
+                            <p>${requestScope.worningMsg}</p>
+                        </div>
+                    </c:if>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="${pageContext.request.contextPath}/images/alcoholCalculator.png" width="591"
+                         class="img-fluid"/>
+                </div>
             </div>
-        </c:if>
+        </div>
 
     </jsp:body>
 
