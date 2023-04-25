@@ -1,20 +1,54 @@
 @startuml
 
 class LottoCoupon {
-    - final List<Integer> unwantedNumbers
-    - int numberCount = 7
-    - int numberIntervalMin = 1
-    - int numberIntervalMax = 36
-    - int ticketCount = 10
+    - final Map<Integer, LottoRow> rows
+    - final Set<Integer> unwantedNumbers
+    - int numberCount
+    - int numberIntervalMin
+    - int numberIntervalMax
+    - int ticketCount
 
     + LottoCoupon()
-    + getters()
-    + setters()
+    + LottoCoupon(int numberCount, int numberIntervalMin, int numberIntervalMax, int ticketCount)
+    + LottoCoupon(int numberCount, int numberIntervalMin, int numberIntervalMax, int ticketCount, Set<Integer> unwantedNumbers, Map<Integer, LottoRow> rows)
 
     + boolean addUnwantedNumber(int number)
     + boolean removeUnwantedNumber(Integer number)
-    + Map<Integer, List<Integer>> generateTickets()
-    - List<Integer> generateTicket()
+    + LottoCoupon generateCoupon()
+    - LottoCoupon regenerateCoupon()
+
+    + getters()
+    + setters()
 }
+
+class LottoRow {
+    - final Set<LottoNumber> numbers
+
+    + LottoRow()
+    + LottoRow(Set<LottoNumber> numbers)
+
+    + LottoRow generateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers)
+    - LottoRow regenerateRow(int numberCount, int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers)
+
+    + Set<LottoNumber> getNumbers()
+    + void addNumber(int number)
+    + void addNumber(LottoNumber number)
+}
+
+class LottoNumber {
+    - int number
+
+    + LottoNumber()
+    + LottoNumber(int number)
+
+    + LottoNumber generateNumber(int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers)
+    - LottoNumber regenerateNumber(int numberIntervalMin, int numberIntervalMax, Set<Integer> unwantedNumbers)
+
+    + int getNumber()
+    + void setNumber(int number)
+}
+
+LottoCoupon *-- LottoRow
+LottoRow *-- LottoNumber
 
 @enduml
