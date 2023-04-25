@@ -53,22 +53,28 @@ public class LottoCoupon {
     }
 
     public boolean addUnwantedNumber(int number) {
+        return this.unwantedNumbers.add(number);
+        /*
         if (this.unwantedNumbers.contains(number)) {
             return false;
         }
 
         this.unwantedNumbers.add(number);
         return true;
+         */
     }
 
     // TODO: Hvis parameteren er `int` og ikke `Integer`, så virker det ikke fordi ArrayList#remove(int) er index.
     public boolean removeUnwantedNumber(Integer number) {
+        return this.unwantedNumbers.remove(number);
+        /*
         if (!this.unwantedNumbers.contains(number)) {
             return false;
         }
 
         this.unwantedNumbers.remove(number);
         return true;
+         */
     }
 
     public Map<Integer, List<Integer>> generateTickets() {
