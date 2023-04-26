@@ -9,13 +9,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * The purpose of this servlet is to handle the {@link LottoCoupon}.
+ * @author Peter
+ */
 @WebServlet(name = "lotto", urlPatterns = {"/lotto"})
 public class Lotto extends HttpServlet {
 
+    /**
+     * The purpose of this method is to redirect to the lotto.jsp page.
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.sendRedirect("lotto.jsp");
     }
 
+    /**
+     * The purpose of this method is to generate a lotto coupon and redirect to the lotto.jsp page.
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LottoCoupon lottoCoupon = (LottoCoupon) request.getSession().getAttribute("lottoCoupon");
         if (lottoCoupon == null) {
