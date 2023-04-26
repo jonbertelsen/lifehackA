@@ -21,14 +21,16 @@
 
 <jsp:body>
 
-
- <br>
-
-<h2 style="color: #000185; font-family: sans-serif" > Calculate total running time</h2>
+    <img src="images/Runner.jpeg" alt="Runner" width="800" height="600" style="float: right ;">
 
 
+
+    <h2 style="color: #000185; font-family: sans-serif" > Calculate total running time</h2>
+
+    <br>
 
 <p style="color: #000038; font-family: sans-serif"> Enter your pace pr. kilometer </p>
+
 <form style="border: 5px; color: #382E00" action="RunningCalc" method="post">
     <input type="hidden" name="formType" value="calcTime">
 
@@ -38,7 +40,6 @@
     <label for="seconds">Seconds:</label>
     <input type="number" id="seconds" name="seconds" min="0" max="59" required>
 
-<br>
 <br>
 <br>
 
@@ -56,8 +57,11 @@
 </form>
 
     <br>
-    <h2 style="color: #000185; font-family: sans-serif">Calculate your pace!</h2>
+
+    <h2 style="color: #000185; font-family: sans-serif">Calculate your pace</h2>
+
     <br>
+
     <form action="RunningCalc" method="post">
         <input type="hidden" name="formType" value="calcPace">
 
@@ -92,23 +96,15 @@
             <p>Total pace(km) pr.min : ${requestScope.totalPace}</p>
         </c:if>
 
-
     </form>
 
-
-
-
-
-
-
 <br>
 <br>
+
 
 <a style="color: #000038; font-family: sans-serif" href="https://www.calculatorsoup.com/calculators/health/pace-calculator.php" > Link to calculation methods</a>
 
-
 </jsp:body>
-
 
 
 

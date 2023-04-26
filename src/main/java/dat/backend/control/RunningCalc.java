@@ -4,7 +4,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "RunningCalc" , value = "/RunningCalc")
+@WebServlet(name = "runningCalc" , value = "/RunningCalc")
 public class RunningCalc extends HttpServlet {
 
     @Override
@@ -56,11 +56,7 @@ public class RunningCalc extends HttpServlet {
             request.setAttribute("totalPace", totalPace);
         }
 
-
        request.getRequestDispatcher("runningCalc.jsp").forward(request,response);
-
-
-
 
     }
 }
