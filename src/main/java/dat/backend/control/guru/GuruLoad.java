@@ -13,17 +13,40 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * This class handles the HTTP GET and POST requests from the client and handles the communication with the OpenAI API
+ * @author <a href="https://github.com/MagKon">Magkon</a> and <a href="https://github.com/Skainsmate">Skainsmate</a>
+ * @version 1.0
+ * @since 1.0
+ * @see HttpServlet
+ * @see WebServlet
+ * @see HttpServletRequest
+ * @see HttpServletResponse
+ */
 @WebServlet(name = "guru", urlPatterns = {"/guru"} )
 public class GuruLoad extends HttpServlet {
     String  servletUrl = "http://64.226.103.200:8080/APIAccess-1.0-SNAPSHOT/apikey";
     String apiKey = "";
 
+    /**
+     * This method handles the HTTP GET request from the client and forwards the request to the guru.jsp file
+     * @param request the HTTP GET request
+     * @param response the HTTP response
+     * @throws IOException if the request fails
+     * @throws ServletException if the request fails
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // You shouldn't end up here with a GET-request, thus you get sent back to frontpage
         request.getRequestDispatcher("WEB-INF/guru.jsp").forward(request, response);
     }
 
-    // Handles HTTP POST requests from the client
+    /**
+     * This method handles the HTTP POST request from the client
+     * @param request the HTTP POST request
+     * @param response the HTTP response
+     * @throws IOException if the request fails
+     * @throws ServletException if the request fails
+     */
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
@@ -72,6 +95,10 @@ public class GuruLoad extends HttpServlet {
         request.getRequestDispatcher("WEB-INF/guru/guruframe.jsp").forward(request, response);
     }
 
+    /**
+     * This method gets the API key from the droplet and sets it to the apiKey variable
+     * @throws Exception if the connection fails
+     */
     private void getKeyFromDroplet() throws Exception {
         URL surl = new URL(servletUrl);
 
