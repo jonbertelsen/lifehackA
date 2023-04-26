@@ -13,7 +13,7 @@ public class SodaIntakeServlet extends HttpServlet {
     }
 
     /**
-     *
+     * This function is used to calculate soda intakes, daily savings and intake reduction
      * @param request The http request object sent to the servlet
      * @param response The http response object.
      * @throws ServletException if the request dispatcher fails to forward the request
