@@ -41,13 +41,16 @@
                 <form action="alcoholCalculator.jsp">
                     <button type="submit" class="btn">Promille måler</button>
                 </form>
+                 <form action="temperatureConverter.jsp">
+                     <button type="submit" class="btn">Temperature Converter</button>
+                 </form>
                  <form action="lotto" method="get">
                      <button type="submit" class="btn">Lotto</button>
                  </form>
                  <form action="smoking" method="get">
                      <button type="submit" class="btn">Rygestop hjælper</button>
                  </form>
-                 <form action="unitConverter" method="post">
+                 <form action="unitConverter.jsp">
                      <button type="submit" class="btn">Unit converter</button>
                  </form>
              </div>
