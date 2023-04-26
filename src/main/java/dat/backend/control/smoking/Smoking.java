@@ -5,6 +5,12 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * @author skr, tlb
+ * This class 's purpose is to redirect to smokingCessation.jsp
+ * and make the reduction calculations from the user's input
+ */
+
 @WebServlet(name = "smoking", value = "/smoking")
 public class Smoking extends HttpServlet {
     @Override
@@ -43,15 +49,24 @@ public class Smoking extends HttpServlet {
 
 
     public double calculatePerDay(int amount, double price){
+        /**
+         * @return returns the cigarette consumption per day
+         */
         //assuming there are 20 cigarettes in a pack.
         return (amount/20.0)*price;
     }
 
     public double calculatePerMonth(int amount, double price){
+        /**
+         * @return returns the cigarette consumption per month
+         */
         return calculatePerDay(amount, price) * 30;
     }
 
     public double calculatePerYear(int amount, double price){
+        /**
+         * @return returns the cigarette consumption per year
+         */
         return calculatePerDay(amount, price) * 365;
     }
 
@@ -72,6 +87,10 @@ public class Smoking extends HttpServlet {
     }
 
     public int calculatedCigarettes(double percentage, int amount){
+        /**
+         * @returns returns the amount of cigarettes the user can smoke
+         * with the chosen reduced percentage.
+         */
         return (int) (amount*(100-percentage)/100);
     }
 
