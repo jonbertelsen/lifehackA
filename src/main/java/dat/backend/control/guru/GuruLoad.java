@@ -25,8 +25,8 @@ import java.net.URL;
  */
 @WebServlet(name = "guru", urlPatterns = {"/guru"} )
 public class GuruLoad extends HttpServlet {
-    String  servletUrl = "http://64.226.103.200:8080/APIAccess-1.0-SNAPSHOT/apikey";
-    String apiKey = "";
+    private final String  servletUrl = "http://64.226.103.200:8080/APIAccess-1.0-SNAPSHOT/apikey";
+    private String apiKey = "";
 
     /**
      * This method handles the HTTP GET request from the client and forwards the request to the guru.jsp file
