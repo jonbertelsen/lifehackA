@@ -9,6 +9,7 @@
 
 
     <jsp:body>
+
         <div class="row mb-4">
             <div class="d-flex justify-content-center col-12">
                 <div class="frontpageTitle">
@@ -66,6 +67,7 @@
                  </form>
              </div>
          </div>
+
 
 
 
