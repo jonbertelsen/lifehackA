@@ -3,34 +3,28 @@
 body{
     font-family: Arial, sans-serif;
 }
-
 h1{
    color: #000185;
 }
 p{
     color: #000038;
 }
-
 .navbar{
     background-color: #000038;
 }
-
 .navbar-toggler{
     border-color: #846C00;
 }
-
 /* url found from https://www.geeksforgeeks.org/how-to-change-hamburger-toggler-color-in-bootstrap/*/
 .navbar-toggler-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(209, 175, 21, 100)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
 .nav-link{
     color: #d1af15;
 }
 .nav-link:hover{
     color: #846C00;
 }
-
 .btn{
     background-color: #000185;
     border-radius: 25px;
@@ -41,15 +35,13 @@ p{
     border-radius: 25px;
     color: #846C00;
 }
-
-
-table {
+table{
     border-collapse: collapse;
     border: 1px solid white;
     padding:15px;
 }
 
-th, td {
+th, td{
     border: 1px solid silver;
     padding:15px;
 }
@@ -62,7 +54,7 @@ form{
 h5{
     color: #000038;
 }
-.frontpageTitle {
+.frontpageTitle{
     background-color: #d1af15;
     padding: 20px 30px;
     border: 2px dashed #382E00;

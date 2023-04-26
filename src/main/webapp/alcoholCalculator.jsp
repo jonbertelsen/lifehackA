@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <img src="${pageContext.request.contextPath}/images/alcoholCalculator.png" width="591"
+                    <img src="${pageContext.request.contextPath}/images/alcoholCalculator/alcoholCalculator.png" width="591"
                          class="img-fluid"/>
                 </div>
             </div>

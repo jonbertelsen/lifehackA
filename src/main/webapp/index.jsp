@@ -18,7 +18,7 @@
         </div>
         <div class="row">
             <div class="d-flex justify-content-center col-lg-4">
-                <img src="${pageContext.request.contextPath}/images/lifehack-logo.png" width="200px;" height="210px;" alt="logo">
+                <img src="${pageContext.request.contextPath}/images/frontpage/lifehack-logo.png" width="200px;" height="210px;" alt="logo">
             </div>
             <div class="col-lg-4">
                      <h5 class="frontpageUnderTitle">Et lifehack er betegnelsen for en smart genvej,  der øger produktiviteten og effektiviteten i alle dele af livet. <br>
@@ -28,7 +28,7 @@
                      </h5>
             </div>
             <div class="d-flex justify-content-center col-lg-4">
-                <img src="${pageContext.request.contextPath}/images/lifehack-logo.png" width="200px;" height="210px;" alt="logo">
+                <img src="${pageContext.request.contextPath}/images/frontpage/lifehack-logo.png" width="200px;" height="210px;" alt="logo">
             </div>
         </div>
 

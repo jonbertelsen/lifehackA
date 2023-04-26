@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.jsp">
-                <img src="${pageContext.request.contextPath}/images/lifehack-logo.png" width="100px;" class="img-fluid"/>
+                <img src="${pageContext.request.contextPath}/images/frontpage/lifehack-logo.png" width="100px;" alt="logo" class="img-fluid"/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
