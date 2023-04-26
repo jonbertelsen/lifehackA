@@ -59,7 +59,7 @@
                  <form action="guru.jsp">
                      <button type="submit" class="btn d-flex flex-wrap">Guru</button>
                  </form>
-                 <form action="#">
+                 <form action="bmiCalculator.jsp">
                      <button type="submit" class="btn">Bmi beregner</button>
                  </form>
                  <form action="sodaIntake.jsp">

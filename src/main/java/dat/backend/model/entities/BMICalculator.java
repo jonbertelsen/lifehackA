@@ -17,9 +17,6 @@ public class BMICalculator {
 
         double bmi = weightInKg / (heightInM * heightInM);
 
-        DecimalFormat df = new DecimalFormat("#.00");
-        bmiTwoDecimals = Double.parseDouble(df.format(bmi));
-
-        return bmiTwoDecimals;
+        return bmi;
     }
 }

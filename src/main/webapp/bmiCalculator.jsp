@@ -19,7 +19,7 @@
     </h1>
 </div>
 
-    <form action="ServletBmiCalculate" id="heightweightSubmit" method="post">
+    <form action="servletBmiCalculate" id="heightweightSubmit" method="post">
         <input type="number" id="height" name="height" placeholder="Height" required="required"><br>
         <input type="number" id="weight" name="weight" placeholder="Weight" required="required"><br><br>
         <input type="submit" id="submit" value="Submit">
