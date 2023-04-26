@@ -7,9 +7,9 @@
     <!-- TODO: Change <artifactId> and <name> below to your project name -->
 
     <groupId>dat</groupId>
-    <artifactId>startcode</artifactId>
+    <artifactId>lifehackA</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>startcode</name>
+    <name>lifehackA</name>
     <packaging>war</packaging>
 
     <properties>
@@ -80,6 +80,17 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>service</artifactId>
+            <version>${version}</version>
+        </dependency>
 
     </dependencies>
 
@@ -90,6 +101,16 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <destDir>/docs</destDir>
+                    <reportOutputDirectory>${basedir}</reportOutputDirectory>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 </project>

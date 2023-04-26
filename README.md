@@ -26,7 +26,7 @@ T.B.D.
       1. > `git init`
 2. Det er en god idé at ændre folder-navnet inden du åbner projektet i IntelliJ. Det kan også være en god ide at åbne pom.xml i en simpel editor og rette "name" og "artifactid" før du åbner projektet i IntelliJ. På den måde er navngivningen korrekt fra starten.
 3. Åbn Workbench og kør en tilpasset (med dit databasenavn i stedet for `startcode`) version af sql-filen `startcode.sql`, som ligger i mappen `resources`. Den opretter en database med en user-tabel og en test-database.
-4. Du skal evt. ændre kodeord til databasen i projektet. Det gøres i filerne: `/persistence/ConnectionPool` i linie 14 og 15. Du skal også ændre i UserMapperTest.
+4. Du skal evt. ændre kodeord til databasen i projektet. Det gøres i filerne: `/persistence/ConnectionPool` i linie 14 og 15. Du skal også ændre i dat.backend.persistence.UserMapperTest.
 5. Refactor `startcode` til dit eget projekt alle de steder, hvor det er relevant. Fx her:
    1. I projektroden
    2. I pom.xml (`artifactId`og `name` elementerne)
