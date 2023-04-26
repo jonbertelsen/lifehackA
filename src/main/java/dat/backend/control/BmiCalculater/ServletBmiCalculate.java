@@ -8,7 +8,7 @@ import javax.servlet.annotation.*;
 import java.awt.*;
 import java.io.IOException;
 
-@WebServlet(name = "ServletBmiCalculate", value = "/ServletBmiCalculate")
+@WebServlet(name = "servletBmiCalculate", value = "/servletBmiCalculate")
 /**
  *Purpose when user has made input and presses submit, it takes the inputs and calculates BMI and then sends the user back to the jsp page with the BMI displayed.
  * User is users
