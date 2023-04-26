@@ -38,11 +38,11 @@
 
         <div class="row" >
              <div class="d-flex justify-content-around col-sm-12 col-md-6 col-lg-6 mb-sm-4">
-                <form action="alcoholCalculator.jsp">
-                    <button type="submit" class="btn">Alcohol Calculator</button>
-                </form>
-                 <form action="temperatureConverter.jsp">
-                     <button type="submit" class="btn">Temperature Converter</button>
+                 <form action="bmiCalculator.jsp">
+                     <button type="submit" class="btn">BMI calculator</button>
+                 </form>
+                 <form action="guru.jsp">
+                     <button type="submit" class="btn d-flex flex-wrap">Guru</button>
                  </form>
                  <form action="lotto" method="get">
                      <button type="submit" class="btn">Lotto</button>
@@ -56,24 +56,21 @@
              </div>
 
              <div class="d-flex justify-content-around col-sm-12 col-md-6 col-lg-6">
+                 <form action="temperatureConverter.jsp">
+                     <button type="submit" class="btn">Temperature Converter</button>
+                 </form>
                  <form action="runningCalc.jsp">
                      <button type="submit" class="btn">Running Calculator</button>
                  </form>
-                 <form action="guru.jsp">
-                     <button type="submit" class="btn d-flex flex-wrap">Guru</button>
-                 </form>
-                 <form action="bmiCalculator.jsp">
-                     <button type="submit" class="btn">BMI calculator</button>
+                 <form action="alcoholCalculator.jsp">
+                     <button type="submit" class="btn">Alcohol Calculator</button>
                  </form>
                  <form action="sodaIntake.jsp">
                      <button type="submit" class="btn">Soda intake</button>
                  </form>
              </div>
          </div>
-
-
-
-
+        
     </jsp:body>
 
 </t:pagetemplate>
