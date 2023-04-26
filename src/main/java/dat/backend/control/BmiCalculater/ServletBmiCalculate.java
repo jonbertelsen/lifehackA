@@ -32,7 +32,9 @@ public class ServletBmiCalculate extends HttpServlet {
         // Create a new Label object and set its text to the calculated BMI value
         Label bmiLabel = new Label();
         Label bmAssessment = new Label();
-        bmiLabel.setText("Your BMI is: " + BMI);
+
+        bmiLabel.setText(String.format("Your BMI is: %.2f",  BMI));
+
         if(BMI<18.5) {
             bmAssessment.setText("According to your BMI, you might be underweight.");
         }
