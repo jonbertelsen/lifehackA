@@ -35,19 +35,15 @@ public class ServletBmiCalculate extends HttpServlet {
 
         bmiLabel.setText(String.format("Your BMI is: %.2f",  BMI));
 
-        if(BMI<18.5) {
+        if(BMI < 18.5) {
             bmAssessment.setText("According to your BMI, you might be underweight.");
-        }
-        if(BMI<24.9) {
+        } else if(BMI >= 18.5 && BMI <= 24.9 ) {
             bmAssessment.setText("According to your BMI, you might be a normal weight.");
-        }
-        if(BMI<29.9) {
+        } else if(BMI >= 25 && BMI <= 29.9) {
             bmAssessment.setText("According to your BMI, you might be overweight.");
-        }
-        if(BMI<34.9) {
+        } else if(BMI >= 30 && BMI <= 34.9) {
             bmAssessment.setText("According to your BMI, you might be obese.");
-        }
-        if(BMI>35) {
+        } else {
             bmAssessment.setText("According to your BMI, you might be morbidly/extremely obese.");
         }
         // Set the bmiLabel as an attribute of the request object

@@ -40,7 +40,7 @@
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/unitConverter.jsp">Unit Converter</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/runningCalc.jsp">Løbe måler</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">Rygestop hjælper</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">BMI beregner</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/bmiCalculator.jsp">BMI beregner</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sodaIntake.jsp">Sodavands indtag</a>
                 </div>
             </div>
