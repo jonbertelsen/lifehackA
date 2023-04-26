@@ -14,10 +14,10 @@ import java.io.IOException;
  * User is users
  */
 public class ServletBmiCalculate extends HttpServlet {
-        @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        }
+    }
 
 
     @Override
@@ -33,15 +33,15 @@ public class ServletBmiCalculate extends HttpServlet {
         Label bmiLabel = new Label();
         Label bmAssessment = new Label();
 
-        bmiLabel.setText(String.format("Your BMI is: %.2f",  BMI));
+        bmiLabel.setText(String.format("Your BMI is: %.2f", BMI));
 
-        if(BMI < 18.5) {
+        if (BMI < 18.5) {
             bmAssessment.setText("According to your BMI, you might be underweight.");
-        } else if(BMI >= 18.5 && BMI <= 24.9 ) {
+        } else if (BMI >= 18.5 && BMI <= 24.9) {
             bmAssessment.setText("According to your BMI, you might be a normal weight.");
-        } else if(BMI >= 25 && BMI <= 29.9) {
+        } else if (BMI >= 25 && BMI <= 29.9) {
             bmAssessment.setText("According to your BMI, you might be overweight.");
-        } else if(BMI >= 30 && BMI <= 34.9) {
+        } else if (BMI >= 30 && BMI <= 34.9) {
             bmAssessment.setText("According to your BMI, you might be obese.");
         } else {
             bmAssessment.setText("According to your BMI, you might be morbidly/extremely obese.");
