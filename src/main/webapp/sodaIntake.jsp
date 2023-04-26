@@ -26,6 +26,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-9">
+                        <img style="display:block; margin: auto;" src="images/soda.jpeg">
                         <h1 class="cph-title">Sodavandsindtag beregner</h1>
                         <p class="cph-text">
                             Udfra dit ugentlige forbrug, kan vi beregne hvor meget du kan spare, henholdsvis dagligt, ugentligt, månedligt og årligt, hvis du nedsætter dit forbrug, med enten 10%, 20%, 50% eller 100%.
