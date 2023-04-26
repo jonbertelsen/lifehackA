@@ -3,10 +3,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page errorPage="error.jsp" isErrorPage="false" %>
-
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
 <t:pagetemplate>
     <jsp:attribute name="header">
-             Guru
+            Spørg en Guru
     </jsp:attribute>
 
     <jsp:attribute name="footer">

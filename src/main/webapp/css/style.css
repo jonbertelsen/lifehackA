@@ -1,8 +1,45 @@
-/* CSS stylesheet  for application */
+/* CSS stylesheet for application */
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    color: #000185;
+}
+
+p{
+    color: #000038;
+}
+
+.navbar{
+    background-color: #000038;
+}
+
+.nav-link{
+    color: #d1af15;
+}
+
+.btn{
+    background-color: #000185;
+    border-radius: 25px;
+    color: #d1af15;
+}
+.btn:hover{
+    background-color: #000185;
+    border-radius: 25px;
+    color: #d1af15;
+}
+
+form{
+    text-color: #000038;
+    border-color: #382E00;
+    border-radius: 5px;
+}
 
 table {
     border-collapse: collapse;
-    border: 1px solid silver;
+    border: 1px solid white;
     padding:15px;
 }
 
@@ -10,6 +47,4 @@ th, td {
     border: 1px solid silver;
     padding:15px;
 }
-
-
 

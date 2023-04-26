@@ -4,12 +4,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
+
 <html>
 <head>
     <title>Guru Input</title>
 </head>
 <body>
-<h1>Guru Input</h1>
+<h1>Skriv dit spørgsmål</h1>
 <form id="guru-form" method="POST" action="guru">
     <label for="text-input">Enter text:</label>
     <br>
@@ -18,7 +20,7 @@
     <input type="submit" class="btn btn-primary" value="Submit" maxlength="50">
 </form>
 <br>
-<h1>Guru Output</h1>
+<h1>Svaret kommer her</h1>
 <span>
     ${sessionScope.answer}
 </span>
