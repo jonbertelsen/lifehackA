@@ -39,7 +39,7 @@
         <div class="row" >
              <div class="d-flex justify-content-around col-sm-12 col-md-6 col-lg-6 mb-sm-4">
                 <form action="alcoholCalculator.jsp">
-                    <button type="submit" class="btn">Promille måler</button>
+                    <button type="submit" class="btn">Alcohol Calculator</button>
                 </form>
                  <form action="temperatureConverter.jsp">
                      <button type="submit" class="btn">Temperature Converter</button>
@@ -48,7 +48,7 @@
                      <button type="submit" class="btn">Lotto</button>
                  </form>
                  <form action="smoking" method="get">
-                     <button type="submit" class="btn">Rygestop hjælper</button>
+                     <button type="submit" class="btn">Quit smoking helper</button>
                  </form>
                  <form action="unitConverter.jsp">
                      <button type="submit" class="btn">Unit converter</button>
@@ -57,16 +57,16 @@
 
              <div class="d-flex justify-content-around col-sm-12 col-md-6 col-lg-6">
                  <form action="runningCalc.jsp">
-                     <button type="submit" class="btn">Running speed calculator</button>
+                     <button type="submit" class="btn">Running Calculator</button>
                  </form>
                  <form action="guru.jsp">
                      <button type="submit" class="btn d-flex flex-wrap">Guru</button>
                  </form>
-                 <form action="#">
-                     <button type="submit" class="btn">Bmi beregner</button>
+                 <form action="bmiCalculator.jsp">
+                     <button type="submit" class="btn">BMI calculator</button>
                  </form>
                  <form action="sodaIntake.jsp">
-                     <button type="submit" class="btn">Sodavands indtag</button>
+                     <button type="submit" class="btn">Soda intake</button>
                  </form>
              </div>
          </div>

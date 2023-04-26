@@ -33,15 +33,15 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/alcoholCalculator.jsp">Promille måler</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/temperatureConverter.jsp">Temperature Converter</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/alcoholCalculator.jsp">Alcohol calculator</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/temperatureConverter.jsp">Temperature converter</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/lotto">Lotto</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/guru.jsp">Guru</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/unitConverter.jsp">Unit Converter</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/runningCalc.jsp">Løbe måler</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">Rygestop hjælper</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">BMI beregner</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sodaIntake.jsp">Sodavands indtag</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/unitConverter.jsp">Unit converter</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/runningCalc.jsp">Running calculator</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/smoking">Quit smoking helper</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/bmiCalculator.jsp">BMI calculator</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sodaIntake.jsp">Soda intake</a>
                 </div>
             </div>
         </div>
