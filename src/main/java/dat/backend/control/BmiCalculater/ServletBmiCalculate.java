@@ -9,6 +9,10 @@ import java.awt.*;
 import java.io.IOException;
 
 @WebServlet(name = "ServletBmiCalculate", value = "/ServletBmiCalculate")
+/**
+ *Purpose when user has made input and presses submit, it takes the inputs and calculates BMI and then sends the user back to the jsp page with the BMI displayed.
+ * User is users
+ */
 public class ServletBmiCalculate extends HttpServlet {
         @Override
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
