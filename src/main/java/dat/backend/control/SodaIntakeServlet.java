@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "sodaintakeservlet", value = "/sodaintakeservlet")
-public class sodaIntakeServlet extends HttpServlet {
+public class SodaIntakeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -36,26 +36,6 @@ public class sodaIntakeServlet extends HttpServlet {
             double intakeReduction20 = weeklyIntake * 0.2 / 7;
             double intakeReduction50 = weeklyIntake * 0.5 / 7;
             double intakeReduction100 = weeklyIntake * 1.0 / 7;
-            /*
-            double weeklySaving10 = dailySaving10 * 7;
-            double weeklySaving20 = dailySaving20 * 7;
-            double weeklySaving50 = dailySaving50 * 7;
-            double weeklySaving100 = dailySaving100 * 7;
-
-            double monthlySaving10 = weeklySaving10 * 4;
-            double monthlySaving20 = weeklySaving20 * 4;
-            double monthlySaving50 = weeklySaving50 * 4;
-            double monthlySaving100 = weeklySaving100 * 4;
-
-            double yearlySaving10 = monthlySaving10 * 12;
-            double yearlySaving20 = monthlySaving20 * 12;
-            double yearlySaving50 = monthlySaving50 * 12;
-            double yearlySaving100 = monthlySaving100 * 12;
-
-
-             */
-
-
 
             request.setAttribute("dailyIntake", dailyIntake);
             request.setAttribute("weeklyIntake", weeklyIntake);
@@ -71,19 +51,7 @@ public class sodaIntakeServlet extends HttpServlet {
             request.setAttribute("intakeReduction20", intakeReduction20);
             request.setAttribute("intakeReduction50", intakeReduction50);
             request.setAttribute("intakeReduction100", intakeReduction100);
-/*
-            request.setAttribute("weeklySaving10", weeklySaving10);
-            request.setAttribute("weeklySaving20", weeklySaving20);
-            request.setAttribute("weeklySaving50", weeklySaving50);
-            request.setAttribute("weeklySaving100", weeklySaving100);
 
-            request.setAttribute("monthlySaving10", monthlySaving10);
-            request.setAttribute("monthlySaving20", monthlySaving20);
-            request.setAttribute("monthlySaving50", monthlySaving50);
-            request.setAttribute("monthlySaving100", monthlySaving100);
-
-
- */
             RequestDispatcher dispatcher = request.getRequestDispatcher("sodaIntake.jsp");
             dispatcher.forward(request, response);
 
