@@ -1,4 +1,4 @@
-package dat.backend.control;
+package dat.backend.control.SodaIntake;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -12,6 +12,13 @@ public class SodaIntakeServlet extends HttpServlet {
 
     }
 
+    /**
+     *
+     * @param request The http request object sent to the servlet
+     * @param response The http response object.
+     * @throws ServletException if the request dispatcher fails to forward the request
+     * @throws IOException when weeklyIntake and pricePerLiter is a negative number or if parsing fails
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
