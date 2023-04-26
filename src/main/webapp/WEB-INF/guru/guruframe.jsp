@@ -13,10 +13,16 @@
 <body>
 <h1>Skriv dit spørgsmål</h1>
 <form id="guru-form" method="POST" action="guru">
-    <label for="text-input">Enter text:</label>
-    <br>
-    <textarea class="form-control" id="text-input" name="text" rows="5" cols="50"></textarea>
-    <br><br>
+    <div class="row">
+        <div class="col-md-8">
+            <label for="text-input">Enter text:</label>
+            <br>
+            <textarea class="form-control" id="text-input" name="text" rows="8" cols="50"></textarea>
+        </div>
+        <div class="col-md-4">
+            <img src="${pageContext.request.contextPath}/images/Guru.jpg" alt="Guru" class="img-fluid">
+        </div>
+    </div>
     <input type="submit" class="btn btn-primary" value="Submit" maxlength="50">
 </form>
 <br>
