@@ -7,13 +7,32 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * The servlet for the temperature converter
+ */
+
 @WebServlet(name = "TemperatureConverterServlet", value = "/temperatureconverterservlet")
 public class TemperatureConverterServlet extends HttpServlet {
+    /**
+     * forwards to temperatureConverter.jsp
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("temperatureConverter.jsp").forward(request, response);
 
     }
+
+    /**
+     * Takes the user input from temperatureConverter.jsp and converts from one temperatue scale to the other and displays it.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
