@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/stylem.css">
     <title>Title</title>
 </head>
 <body>
