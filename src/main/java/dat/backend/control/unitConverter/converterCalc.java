@@ -13,7 +13,6 @@ public class converterCalc {
         /**
          * Converts number of chosen unit to meters
          */
-        //Converts number of chosen unit to meters
         switch (inputUnit){
             case "mm":
                 meters = input*0.001;
