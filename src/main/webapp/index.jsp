@@ -13,7 +13,6 @@
     </jsp:attribute>
 
     <jsp:body>
-        <a href="bmiCalculator.jsp">BMI Calculator</a>
         <p>Startcode for 2nd semester </p>
 
         <c:if test="${sessionScope.user != null}">

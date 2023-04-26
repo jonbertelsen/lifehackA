@@ -20,8 +20,8 @@
 </div>
 
     <form action="ServletBmiCalculate" id="heightweightSubmit" method="post">
-        <input type="text" id="height" name="height" placeholder="Height"><br>
-        <input type="text" id="weight" name="weight" placeholder="Weight"><br><br>
+        <input type="number" id="height" name="height" placeholder="Height" required="required"><br>
+        <input type="number" id="weight" name="weight" placeholder="Weight" required="required"><br><br>
         <input type="submit" id="submit" value="Submit">
     </form>
 
