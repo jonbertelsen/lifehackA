@@ -139,25 +139,25 @@
                                         <fmt:formatNumber maxFractionDigits="1" value="${requestScope.yearlyIntake}"/> L
                                     </td>
                                     <td>
-                                        <c:set var="yearlySaving10" value="${monthlySaving10 * 12}"/>
-                                        <c:set var="yearlyIntakeReduction10" value="${monthlyIntakeReduction10 * 12}"/>
+                                        <c:set var="yearlySaving10" value="${requestScope.dailySaving10 * 365}"/>
+                                        <c:set var="yearlyIntakeReduction10" value="${requestScope.intakeReduction10 * 365}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${yearlySaving10}"/><br>
                                         Du kan stadig drikke: <fmt:formatNumber maxFractionDigits="1" value="${requestScope.yearlyIntake - yearlyIntakeReduction10}"/> L
                                     </td>
                                     <td>
-                                        <c:set var="yearlySaving20" value="${monthlySaving20 * 12}"/>
-                                        <c:set var="yearlyIntakeReduction20" value="${monthlyIntakeReduction20 * 12}"/>
+                                        <c:set var="yearlySaving20" value="${requestScope.dailySaving20 * 365}"/>
+                                        <c:set var="yearlyIntakeReduction20" value="${requestScope.intakeReduction20 * 365}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${yearlySaving20}"/><br>
                                         Du kan stadig drikke: <fmt:formatNumber maxFractionDigits="1" value="${requestScope.yearlyIntake - yearlyIntakeReduction20}"/> L
                                     </td>
                                     <td>
-                                        <c:set var="yearlySaving50" value="${monthlySaving50 * 12}"/>
-                                        <c:set var="yearlyIntakeReduction50" value="${monthlyIntakeReduction50 * 12}"/>
+                                        <c:set var="yearlySaving50" value="${requestScope.dailySaving50 * 365}"/>
+                                        <c:set var="yearlyIntakeReduction50" value="${requestScope.intakeReduction50 * 365}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${yearlySaving50}"/><br>
                                         Du kan stadig drikke: <fmt:formatNumber maxFractionDigits="1" value="${requestScope.yearlyIntake - yearlyIntakeReduction50}"/> L
                                     </td>
                                     <td>
-                                        <c:set var="yearlySaving100" value="${monthlySaving100 * 12}"/>
+                                        <c:set var="yearlySaving100" value="${requestScope.dailySaving100 * 365}"/>
                                         Du sparer: <fmt:formatNumber type="currency" value="${yearlySaving100}"/><br>
                                     </td>
                                 </tr>

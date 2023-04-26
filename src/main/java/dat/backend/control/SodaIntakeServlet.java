@@ -24,8 +24,8 @@ public class SodaIntakeServlet extends HttpServlet {
                 return;
             }
             double dailyIntake = weeklyIntake / 7;
-            double monthlyIntake = weeklyIntake * 4;
-            double yearlyIntake = monthlyIntake * 12;
+            double monthlyIntake = dailyIntake * 30;
+            double yearlyIntake = dailyIntake * 365;
 
             double dailySaving10 = dailyIntake * 0.10 * pricePerLiter;
             double dailySaving20 = dailyIntake * 0.20 * pricePerLiter;
@@ -35,7 +35,7 @@ public class SodaIntakeServlet extends HttpServlet {
             double intakeReduction10 = weeklyIntake * 0.1 / 7;
             double intakeReduction20 = weeklyIntake * 0.2 / 7;
             double intakeReduction50 = weeklyIntake * 0.5 / 7;
-            double intakeReduction100 = weeklyIntake * 1.0 / 7;
+            double intakeReduction100 = weeklyIntake / 7;
 
             request.setAttribute("dailyIntake", dailyIntake);
             request.setAttribute("weeklyIntake", weeklyIntake);
