@@ -15,6 +15,18 @@ public class AlcoholServlet extends HttpServlet {
 
     }
 
+    /**
+     * The doPost method is called when the user submits the form.
+     * The method gets the values/parameters (gender, weight, units, hours, minutes, time) from the form in alcoholCalculator.jsp.
+     * The method then creates a new AlcoholCalculator object and calls the balCalc method.
+     * The balCalc method returns a float value which is then set as an attribute in the request.
+     * The method then forwards the request to the alcoholCalculator.jsp page.
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
