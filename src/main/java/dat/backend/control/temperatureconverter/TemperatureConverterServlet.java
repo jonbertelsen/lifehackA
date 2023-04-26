@@ -15,6 +15,14 @@ public class TemperatureConverterServlet extends HttpServlet {
 
     }
 
+
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String temperatureType = request.getParameter("temperaturetype");
